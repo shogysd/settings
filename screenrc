@@ -1,0 +1,26 @@
+# Time-stamp: <Sun Feb 18 00:21:34 JST 2018>
+
+# Encoding
+defencodig utf-8
+
+# Prefix Key
+escape ^Jj
+
+# set scrollback
+defscrollback 10000
+
+# 色
+defbce on
+term xterm-256color
+
+# Delete sartt up screen
+startup_message off
+
+# Enable Auto detach
+autodetach on
+
+#
+altscreen on
+
+# Show date and screen list
+hardstatus alwayslastline "%{= cd} %-w%{= wk} %n %t* %{-}%+w %= LoadAVG [%l] "

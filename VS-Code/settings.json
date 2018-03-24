@@ -1,0 +1,64 @@
+{
+    // editor
+    "editor.fontFamily": "'Bitstream Vera Sans Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "block",
+    "editor.renderLineHighlight": "all",
+    "editor.tabSize": 4,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.trimAutoWhitespace": true,
+    "editor.wrappingIndent": "indent",
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 80,
+    "editor.renderControlCharacters": true,
+    "editor.renderIndentGuides": true,
+    "editor.matchBrackets": true,
+    // terminal
+    "terminal.integrated.cursorBlinking": false,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.confirmOnExit": true,
+    "terminal.integrated.scrollback": 9999,
+    "terminal.external.linuxExec": "xterm",
+    "terminal.external.osxExec": "Terminal.app",
+    // workbench
+    "workbench.editor.enablePreview": false,
+    // git
+    "git.confirmSync": true,
+    "git.enabled": true,
+    // diffEditor
+    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.renderSideBySide": false,
+    // debug
+    "debug.inlineValues": true,
+    // extends
+    "extensions.autoUpdate": true,
+    // window
+    "window.openFilesInNewWindow": "off",
+    // files
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "files.autoSave": "afterDelay",
+    // clock configuration
+    "clock.dateFormat": "mmm dd yyyy HH:MM:ss",
+    // insertDateString
+    "insertDateString.format": "'Time-stamp: <'YYYY-MM-DD hh:mm:ss ZZZ'>'",
+    // C/C++
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    // python
+    "python.formatting.provider": "autopep8",
+}

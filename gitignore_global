@@ -1,0 +1,24 @@
+# 反映させる
+# $git config --global core.excludesfile ~/.gitignore_global
+
+# macOSのアイコンとかフォルダ表示設定
+.DS_Store
+
+# バックアップとか隠しファイル
+*~
+\#*
+.*
+
+# 拡張子系（ファイル名）
+*.log
+*.exe
+*.out
+*.pyc
+*bu
+*BU
+
+# gitに入れない拡張子
+*.oop
+
+# IDE(JetBrains)
+.idea
