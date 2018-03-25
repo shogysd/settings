@@ -189,21 +189,21 @@ function config-update(){
     if [ $start = "y" ]; then
         rm ~/.bash_profile ~/.bashrc ~/.bash_script.bash ~/.inputrc ~/.screenrc ~/.emacs ~/.git-completion.bash  > /dev/null 2>&1
         echo "bash_profile ->"
-        ${download_command} ~/.bash_profile https://raw.githubusercontent.com/shogysd/settings/master/bash_profile
+        ${download_command} ~/.bash_profile https://raw.githubusercontent.com/shogysd/settings/master/bash_profile 2>&1 | awk -F ' ' '{print $2}'
         echo "bashrc ->"
-        ${download_command} ~/.bashrc https://raw.githubusercontent.com/shogysd/settings/master/bashrc
+        ${download_command} ~/.bashrc https://raw.githubusercontent.com/shogysd/settings/master/bashrc 2>&1 | awk -F ' ' '{print $2}'
         echo "bach_script ->"
-        ${download_command} ~/.bash_script.bash https://raw.githubusercontent.com/shogysd/settings/master/bash_script.bash
+        ${download_command} ~/.bash_script.bash https://raw.githubusercontent.com/shogysd/settings/master/bash_script.bash 2>&1 | awk -F ' ' '{print $2}'
         echo "gitignore-switch.bash ->"
-        ${download_command} ~/.gitignore-switch.bash https://raw.githubusercontent.com/shogysd/settings/master/gitignore-switch.bash
+        ${download_command} ~/.gitignore-switch.bash https://raw.githubusercontent.com/shogysd/settings/master/gitignore-switch.bash 2>&1 | awk -F ' ' '{print $2}'
         echo "screenrc ->"
-        ${download_command} ~/.screenrc https://raw.githubusercontent.com/shogysd/settings/master/screenrc
+        ${download_command} ~/.screenrc https://raw.githubusercontent.com/shogysd/settings/master/screenrc 2>&1 | awk -F ' ' '{print $2}'
         echo "emacs ->"
-        ${download_command} ~/.emacs https://raw.githubusercontent.com/shogysd/settings/master/emacs
+        ${download_command} ~/.emacs https://raw.githubusercontent.com/shogysd/settings/master/emacs 2>&1 | awk -F ' ' '{print $2}'
         echo "git-completion.bash ->"
-        ${download_command} ~/.git-completion.bash https://raw.githubusercontent.com/shogysd/git/master/contrib/completion/git-completion.bash
+        ${download_command} ~/.git-completion.bash https://raw.githubusercontent.com/shogysd/git/master/contrib/completion/git-completion.bash 2>&1 | awk -F ' ' '{print $2}'
         echo "gitconfigscript.sh ->"
-        ${download_command} ~/gitconfigscript.sh https://raw.githubusercontent.com/shogysd/settings/master/gitconfigscript.sh
+        ${download_command} ~/gitconfigscript.sh https://raw.githubusercontent.com/shogysd/settings/master/gitconfigscript.sh 2>&1 | awk -F ' ' '{print $2}'
         chmod 744 ~/gitconfigscript.sh
         ~/gitconfigscript.sh
         rm ~/gitconfigscript.sh
