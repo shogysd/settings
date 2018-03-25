@@ -21,8 +21,9 @@ echo -n "start update?: y-or-n: "
 read start
 if [ $start = "y" ]; then
 
-    echo -n "gitignore_global ->"
-    ${download_command} ~/.gitignore_global https://raw.githubusercontent.com/shogysd/settings/master/gitignore_global 2>&1 | awk -F ' ' '{print $2}'
+    echo ""
+    echo "gitignore_global ->"
+    ${download_command} ~/.gitignore_global https://raw.githubusercontent.com/shogysd/settings/master/gitignore_global
 
     rm ~/.gitconfig > /dev/null 2>&1
 
