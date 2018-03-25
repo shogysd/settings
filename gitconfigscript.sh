@@ -53,6 +53,8 @@ if [ $start = "y" ]; then
 
 elif [ $start = "n" ]; then
     echo "EXIT"
+    echo ""
 else
     echo "error"
+    echo ""
 fi
