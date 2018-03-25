@@ -182,10 +182,12 @@ function -gitChecker(){
 
 
 function config-update(){
+    echo ""
     echo "auto setup script for Debiaconfig file updater"
     echo "updateApps: bash, emacs, git"
     echo -n "start setup?: y-or-n: "
     read start
+    echo ""
     if [ $start = "y" ]; then
         rm ~/.bash_profile ~/.bashrc ~/.bash_script.bash ~/.inputrc ~/.screenrc ~/.emacs ~/.git-completion.bash  > /dev/null 2>&1
         echo -n "bash_profile ->"
