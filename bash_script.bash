@@ -189,23 +189,31 @@ function config-update(){
     read start
     echo ""
     if [ $start = "y" ]; then
-        rm ~/.bash_profile ~/.bashrc ~/.bash_script.bash ~/.inputrc ~/.screenrc ~/.emacs ~/.git-completion.bash  > /dev/null 2>&1
-        echo -n "bash_profile ->"
-        ${download_command} ~/.bash_profile https://raw.githubusercontent.com/shogysd/settings/master/bash_profile 2>&1 | awk -F ' ' '{print $2}'
-        echo -n "bashrc ->"
-        ${download_command} ~/.bashrc https://raw.githubusercontent.com/shogysd/settings/master/bashrc 2>&1 | awk -F ' ' '{print $2}'
-        echo -n "bach_script ->"
-        ${download_command} ~/.bash_script.bash https://raw.githubusercontent.com/shogysd/settings/master/bash_script.bash 2>&1 | awk -F ' ' '{print $2}'
-        echo -n "gitignore-switch.bash ->"
-        ${download_command} ~/.gitignore-switch.bash https://raw.githubusercontent.com/shogysd/settings/master/gitignore-switch.bash 2>&1 | awk -F ' ' '{print $2}'
-        echo -n "screenrc ->"
-        ${download_command} ~/.screenrc https://raw.githubusercontent.com/shogysd/settings/master/screenrc 2>&1 | awk -F ' ' '{print $2}'
-        echo -n "emacs ->"
-        ${download_command} ~/.emacs https://raw.githubusercontent.com/shogysd/settings/master/emacs 2>&1 | awk -F ' ' '{print $2}'
-        echo -n "git-completion.bash ->"
-        ${download_command} ~/.git-completion.bash https://raw.githubusercontent.com/shogysd/git/master/contrib/completion/git-completion.bash 2>&1 | awk -F ' ' '{print $2}'
-        echo -n "gitconfigscript.sh ->"
-        ${download_command} ~/gitconfigscript.sh https://raw.githubusercontent.com/shogysd/settings/master/gitconfigscript.sh 2>&1 | awk -F ' ' '{print $2}'
+        rm ~/.bash_profile ~/.bashrc ~/.bash_script.bash ~/.inputrc ~/.screenrc ~/.emacs ~/.git-completion.bash
+        echo ""
+        echo "bash_profile ->"
+        ${download_command} ~/.bash_profile https://raw.githubusercontent.com/shogysd/settings/master/bash_profile
+        echo ""
+        echo "bashrc ->"
+        ${download_command} ~/.bashrc https://raw.githubusercontent.com/shogysd/settings/master/bashrc
+        echo ""
+        echo "bach_script ->"
+        ${download_command} ~/.bash_script.bash https://raw.githubusercontent.com/shogysd/settings/master/bash_script.bash
+        echo ""
+        echo "gitignore-switch.bash ->"
+        ${download_command} ~/.gitignore-switch.bash https://raw.githubusercontent.com/shogysd/settings/master/gitignore-switch.bash
+        echo ""
+        echo "screenrc ->"
+        ${download_command} ~/.screenrc https://raw.githubusercontent.com/shogysd/settings/master/screenrc
+        echo ""
+        echo "emacs ->"
+        ${download_command} ~/.emacs https://raw.githubusercontent.com/shogysd/settings/master/emacs
+        echo ""
+        echo "git-completion.bash ->"
+        ${download_command} ~/.git-completion.bash https://raw.githubusercontent.com/shogysd/git/master/contrib/completion/git-completion.bash
+        echo ""
+        echo "gitconfigscript.sh ->"
+        ${download_command} ~/gitconfigscript.sh https://raw.githubusercontent.com/shogysd/settings/master/gitconfigscript.sh
         chmod 744 ~/gitconfigscript.sh
         ~/gitconfigscript.sh
         rm ~/gitconfigscript.sh
