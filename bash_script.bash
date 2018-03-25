@@ -189,7 +189,7 @@ function config-update(){
     read start
     echo ""
     if [ $start = "y" ]; then
-        rm ~/.bash_profile ~/.bashrc ~/.bash_script.bash ~/.inputrc ~/.screenrc ~/.emacs ~/.git-completion.bash
+        rm ~/.bash_profile ~/.bashrc ~/.bash_script.bash ~/.gitignore-switch.bash ~/.screenrc ~/.emacs ~/.git-completion.bash
         echo ""
         echo "bash_profile ->"
         ${download_command} ~/.bash_profile https://raw.githubusercontent.com/shogysd/settings/master/bash_profile
