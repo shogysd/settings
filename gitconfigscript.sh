@@ -15,6 +15,7 @@ else
     download_command='wget -O'
 fi
 
+echo ""
 echo "update file: .gitconfig"
 echo -n "start update?: y-or-n: "
 read start
