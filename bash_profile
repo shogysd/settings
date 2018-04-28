@@ -26,6 +26,9 @@ export HISTIGNORE=clear
 # 履歴のサイズを変更
 export HISTSIZE=30000
 
+# 履歴のフォーマットを設定
+export HISTTIMEFORMAT='%Y-%m-%d %T   '
+
 # Ctrl-dを1回無視する（2回で反応）
 IGNOREEOF=1
 export IGNOREEOF
