@@ -38,6 +38,8 @@ if [ ${os} = "Darwin" ]; then
     alias ls='ls -G'
     alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
     alias sema='sudo /Applications/Emacs.app/Contents/MacOS/Emacs'
+    bin_path=`echo /Library/Frameworks/Python.framework/Versions/3.[0-9]/bin`
+    export PATH="${bin_path}:${PATH}"
 else
     # Linux ${os} = "Linux"
     alias sema='sudo emacs'
