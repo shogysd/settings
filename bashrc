@@ -1,4 +1,4 @@
-# Time-stamp: <Wed Feb 07 23:02:02 JST 2018>
+# Time-stamp: <Sat May 26 01:01:01 JST 2018>
 
 ###############
 
@@ -13,7 +13,7 @@ source ~/.git-completion.bash
 
 PS1="\n\h  ( \$(-pathWriter) )\
 \$(-gitChecker)\
-\n[ \t ] \$"
+\n[ \s\$(-envWriter) ] \$"
 
 
 # alias
