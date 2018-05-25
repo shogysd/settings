@@ -1,4 +1,4 @@
-# Time-stamp: <Sat Mar 24 22:57:20 JST 2018>
+# Time-stamp: <Sat May 26 00:49:41 JST 2018>
 
 os=`uname 2>&1`
 if [ ${os} = "Darwin" ]; then
@@ -174,6 +174,14 @@ function -gitHashPrinter(){
 function -gitChecker(){
     if ${git_command_path} rev-parse --is-inside-work-tree > /dev/null 2>&1; then
         echo -e " < `-gitBranchPrinter` | `-gitHashPrinter` >"
+    fi
+}
+
+function -envWriter(){
+    envpath=`echo -n $VIRTUAL_ENV | awk -F'/' '{printf $NF}'`
+    if [ -n "${envpath}" ]; then
+        echo -n " / pyenv: "
+        echo -n ${envpath}
     fi
 }
 
