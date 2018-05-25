@@ -1,4 +1,4 @@
-# Time-stamp: <Wed Feb 07 23:02:02 JST 2018>
+# Time-stamp: <Sat May 26 00:54:09 JST 2018>
 
 # ~/.bashrcをターミナル起動時に読み込ませる
 if [ -f ~/.bashrc ]; then
@@ -13,7 +13,7 @@ source ~/.git-completion.bash
 
 PS1="\n\h  ( \$(-pathWriter) )\
 \$(-gitChecker)\
-\n[ \t ] \$"
+\n[ \s\$(-envWriter) ] \$"
 
 
 # 連続をしたコマンドを1度のみの記録に + スペースから始まるコマンドを無視
@@ -32,6 +32,9 @@ export HISTTIMEFORMAT='%Y-%m-%d %T   '
 # Ctrl-dを1回無視する（2回で反応）
 IGNOREEOF=1
 export IGNOREEOF
+
+# virtualenvでpromptを変更しない
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 
 # OS依存
