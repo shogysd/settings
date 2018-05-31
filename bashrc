@@ -1,4 +1,4 @@
-# Time-stamp: <Sat May 26 01:01:01 JST 2018>
+# Time-stamp: <Thu May 31 21:57:19 JST 2018>
 
 ###############
 
@@ -20,6 +20,7 @@ PS1="\n\h  ( \$(-pathWriter) )\
 alias python='python3'
 alias py='python3'
 alias grep='grep --color=auto'
+alias rm='rm -i'
 
 # OS依存
 os=`uname 2>&1`
@@ -42,6 +43,3 @@ alias clpp14='clang++ -std=c++14'
 alias gpp='g++ -std=c++14'
 alias gpp11='g++ -std=c++11'
 alias gpp14='g++ -std=c++14'
-
-# GOPATH
-export GOPATH=$HOME/gopath_global
