@@ -1,4 +1,4 @@
-;; Time-stamp: <Mon Mar 19 23:35:21 JST 2018>
+;; Time-stamp: <Thu May 31 22:12:51 JST 2018>
 
 (custom-set-variables
  )
@@ -144,6 +144,9 @@
 ;; 現在行を目立たせるのを有効に
 (global-hl-line-mode t)
 
+;; 行末の空白を削除
+;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; start-up messageを表示しない
 (setq inhibit-startup-message t)
 
@@ -219,9 +222,6 @@
 
 ;; 行末のspaceを表示
 (setq-default show-trailing-whitespace t)
-
-;; 行末の空白を削除
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; カーソルの点滅をさせない
 (blink-cursor-mode 0)
@@ -326,6 +326,9 @@
 
 
 ;;; Keymap ;;;
+
+;; 行末の空白を削除
+(global-set-key (kbd "M-`") 'delete-trailing-whitespace)
 
 ;; フレーム単位のスクロール（上）
 (global-set-key (kbd "M-p") 'scroll-down-command)
