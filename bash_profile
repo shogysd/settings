@@ -1,4 +1,4 @@
-# Time-stamp: <Sat May 26 00:54:09 JST 2018>
+# Time-stamp: <Thu May 31 21:48:09 JST 2018>
 
 # ~/.bashrcをターミナル起動時に読み込ませる
 if [ -f ~/.bashrc ]; then
@@ -36,6 +36,8 @@ export IGNOREEOF
 # virtualenvでpromptを変更しない
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
+
+alias rm='rm -i'
 
 # OS依存
 os=`uname 2>&1`
