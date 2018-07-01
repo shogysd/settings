@@ -13,7 +13,7 @@ source ~/.git-completion.bash
 
 PS1="\n\h  ( \$(-pathWriter) )\
 \$(-gitChecker)\
-\n[ \s\$(-envWriter) ] \$"
+\n[ \t\$(-envWriter) ] \$"
 
 
 # alias
