@@ -1,6 +1,8 @@
 # Time-stamp: <Sat May 26 00:49:41 JST 2018>
 
 os=`uname 2>&1`
+rm_path=`which rm`
+
 if [ ${os} = "Darwin" ]; then
     # macOS
     emacs_PATH='/Applications/Emacs.app/Contents/MacOS/Emacs'
@@ -94,15 +96,15 @@ function ema(){
 function flush(){
     ls -A *~ &> /dev/null
     if [ $? = 0 ]; then
-        rm *~
+        ${rm_path} *~
     fi
     ls -A .*~ &> /dev/null
     if [ $? = 0 ]; then
-        rm .*~
+        ${rm_path} .*~
     fi
     ls -A \#*\# &> /dev/null
     if [ $? = 0 ]; then
-        rm \#*\#
+        ${rm_path} \#*\#
     fi
 }
 
@@ -197,7 +199,7 @@ function config-update(){
     read start
     echo ""
     if [ $start = "y" ]; then
-        rm ~/.bash_profile ~/.bashrc ~/.bash_script.bash ~/.gitignore-switch.bash ~/.screenrc ~/.emacs ~/.git-completion.bash
+        ${rm_path} ~/.bash_profile ~/.bashrc ~/.bash_script.bash ~/.gitignore-switch.bash ~/.screenrc ~/.emacs ~/.git-completion.bash
         echo ""
         echo "bash_profile ->"
         ${download_command} ~/.bash_profile https://raw.githubusercontent.com/shogysd/settings/master/bash_profile
@@ -224,7 +226,7 @@ function config-update(){
         ${download_command} ~/gitconfigscript.sh https://raw.githubusercontent.com/shogysd/settings/master/gitconfigscript.sh
         chmod 744 ~/gitconfigscript.sh
         ~/gitconfigscript.sh
-        rm ~/gitconfigscript.sh
+        ${rm_path} ~/gitconfigscript.sh
         source ~/.bash_profile
     elif [ $start = "n" ]; then
         echo "EXIT"
