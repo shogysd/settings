@@ -170,7 +170,7 @@
 ;; (setq initial-scratch-message nil)
 
 ;; 最初のメッセージを指定
-(setq initial-scratch-message "Time-stamp: <>")
+(setq initial-scratch-message "Time-stamp: <>\n\n")
 ;; (setq initial-scratch-message "NF")
 
 ;; OSのクリップボードと文字列を共有
