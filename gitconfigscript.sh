@@ -43,7 +43,6 @@ if [ $start = "y" ]; then
     git config --global alias.clonea 'clone --recursive'
     git config --global alias.sub-clone 'submodule update --init --recursive'
     git config --global alias.wdiff 'diff --word-diff'
-    git config --global alias.ignore-switch \!~/.gitignore-switch.bash
 
 
     echo ""
