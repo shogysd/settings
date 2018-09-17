@@ -57,7 +57,7 @@ function shis(){
 }
 
 
-function gitignore(){
+function gitignore-sw(){
     if [ $# != 1 ]; then
         echo "error: arguments err"
     elif [ "$1" = "-e" ] || [ "$1" = "--enable" ]; then
@@ -85,6 +85,41 @@ function gitignore(){
             echo "gitignore_global is disable"
         else
             echo "error: not found: gitignore file"
+        fi
+    else
+        echo "error: $1 is unauthorized argument"
+    fi
+}
+
+
+function hosts-sw(){
+    if [ $# != 1 ]; then
+        echo "error: arguments err"
+    elif [ "$1" = "-e" ] || [ "$1" = "--enable" ]; then
+        if [ -f /etc/hosts ]; then
+            echo "/etc/hosts is already enable"
+        elif [ -f /etc/hosts_disable ]; then
+            sudo mv /etc/hosts_disable /etc/hosts
+            echo "enabled: /etc/hosts"
+        else
+            echo "error: not found: /etc/hosts file"
+        fi
+    elif [ "$1" = "-d" ] || [ "$1" = "--disable" ]; then
+        if [ -f /etc/hosts_disable ]; then
+            echo "/etc/hosts is already disable"
+        elif [ -f /etc/hosts ]; then
+            sudo mv /etc/hosts /etc/hosts_disable
+            echo "disable: /etc/hosts"
+        else
+            echo "error: not found: gitignore file"
+        fi
+    elif [ "$1" = "-s" ] || [ "$1" = "--ststus" ]; then
+        if [ -f /etc/hosts ]; then
+            echo "/etc/hosts is enable"
+        elif [ -f /etc/hosts_disable ]; then
+            echo "/etc/hosts is disable"
+        else
+            echo "error: not found: /etc/hosts file"
         fi
     else
         echo "error: $1 is unauthorized argument"
