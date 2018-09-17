@@ -1,4 +1,4 @@
-# Time-stamp: <Sat May 26 00:49:41 JST 2018>
+# Time-stamp: <Mon Sep 17 13:21:50 JST 2018>
 
 os=`uname 2>&1`
 rm_path=`which rm`
@@ -53,6 +53,41 @@ function shis(){
         echo "error: nothing arguments"
     else
         echo "error: many arguments"
+    fi
+}
+
+
+function gitignore(){
+    if [ $# != 1 ]; then
+        echo "error: arguments err"
+    elif [ "$1" = "-e" ] || [ "$1" = "--enable" ]; then
+        if [ -f ~/.gitignore_global ]; then
+            echo "gitignore_global is already enable"
+        elif [ -f ~/.gitignore_global_disable ]; then
+            mv ~/.gitignore_global_disable ~/.gitignore_global
+            echo "enabled: ~/.gitignore_global"
+        else
+            echo "error: not found: gitignore file"
+        fi
+    elif [ "$1" = "-d" ] || [ "$1" = "--disable" ]; then
+        if [ -f ~/.gitignore_global_disable ]; then
+            echo "gitignore_global is already disable"
+        elif [ -f ~/.gitignore_global ]; then
+            mv ~/.gitignore_global ~/.gitignore_global_disable
+            echo "disable: ~/.gitignore_global"
+        else
+            echo "error: not found: gitignore file"
+        fi
+    elif [ "$1" = "-s" ] || [ "$1" = "--ststus" ]; then
+        if [ -f ~/.gitignore_global ]; then
+            echo "gitignore_global is enable"
+        elif [ -f ~/.gitignore_global_disable ]; then
+            echo "gitignore_global is disable"
+        else
+            echo "error: not found: gitignore file"
+        fi
+    else
+        echo "error: $1 is unauthorized argument"
     fi
 }
 
