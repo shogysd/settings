@@ -27,11 +27,6 @@ echo "--- install ---"
 sudo apt-get -y install emacs
 sudo apt-get -y install git
 sudo apt-get -y install curl
-sudo apt-get -y install python3
-sudo apt-get -y install gcc
-sudo apt-get -y install g++
-sudo apt-get -y install clang
-sudo apt-get -y install clang++
 sudo apt-get -y install chromium
 sudo apt-get -y install ibus-mozc
 sudo apt-get -y install screen
