@@ -260,7 +260,7 @@ function -envWriter(){
 
 #==================================================#
 
-
+url_common='https://raw.githubusercontent.com/shogysd/settings/master/'
 function config-update(){
     echo ""
     echo "auto setup script for Debiaconfig file updater"
@@ -272,28 +272,25 @@ function config-update(){
         ${rm_path} ~/.bash_profile ~/.bashrc ~/.bash_script.bash ~/.gitignore-switch.bash ~/.screenrc ~/.emacs ~/.git-completion.bash
         echo ""
         echo "bash_profile ->"
-        ${download_command} ~/.bash_profile https://raw.githubusercontent.com/shogysd/settings/master/bash_profile
+        ${download_command} ~/.bash_profile ${url_common}config_files/bash_profile
         echo ""
         echo "bashrc ->"
-        ${download_command} ~/.bashrc https://raw.githubusercontent.com/shogysd/settings/master/bashrc
+        ${download_command} ~/.bashrc ${url_common}config_files/bashrc
         echo ""
         echo "bach_script ->"
-        ${download_command} ~/.bash_script.bash https://raw.githubusercontent.com/shogysd/settings/master/bash_script.bash
-        echo ""
-        echo "gitignore-switch.bash ->"
-        ${download_command} ~/.gitignore-switch.bash https://raw.githubusercontent.com/shogysd/settings/master/gitignore-switch.bash
+        ${download_command} ~/.bash_script.bash ${url_common}config_files/bash_script.bash
         echo ""
         echo "screenrc ->"
-        ${download_command} ~/.screenrc https://raw.githubusercontent.com/shogysd/settings/master/screenrc
+        ${download_command} ~/.screenrc ${url_common}config_files/screenrc
         echo ""
         echo "emacs ->"
-        ${download_command} ~/.emacs https://raw.githubusercontent.com/shogysd/settings/master/emacs
+        ${download_command} ~/.emacs ${url_common}config_files/emacs
         echo ""
         echo "git-completion.bash ->"
         ${download_command} ~/.git-completion.bash https://raw.githubusercontent.com/shogysd/git/master/contrib/completion/git-completion.bash
         echo ""
         echo "gitconfigscript.sh ->"
-        ${download_command} ~/gitconfigscript.sh https://raw.githubusercontent.com/shogysd/settings/master/gitconfigscript.sh
+        ${download_command} ~/gitconfigscript.sh ${url_common}gitconfigscript.sh
         chmod 744 ~/gitconfigscript.sh
         ~/gitconfigscript.sh
         ${rm_path} ~/gitconfigscript.sh
