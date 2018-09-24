@@ -7,9 +7,9 @@ fi
 
 sudo echo "<<< start >>>"
 
-if [ -f ~/.bashrc ]; then
-    mv ~/.bashrc ~/.bashrcOLD
-fi
+# if [ -f ~/.bashrc ]; then
+#     mv ~/.bashrc ~/.bashrcOLD
+# fi
 
 ##################
 # update/upgrade #
@@ -57,5 +57,12 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:nocaps']"
 # ディレクトリのカタカナを英字表記に
 sudo apt-get -y install xdg-user-dirs-gtk
 LANG=C xdg-user-dirs-gtk-update
+
+#################
+# config-update #
+#################
+wget -O ~/.bash_script.bash https://raw.githubusercontent.com/shogysd/settings/master/config_files/bash_script.bash
+source ~/.bash_script.bash
+config-update
 
 echo "<<< finish >>>"
