@@ -54,9 +54,6 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:nocaps']"
 # CapsLockキーの動作をデフォルトに戻す場合
 # dconf reset /org/gnome/desktop/input-sources/xkb-options
 
-# 標準のエディタを変更する
-update-alternatives --config editor
-
 # ディレクトリのカタカナを英字表記に
 sudo apt-get -y install xdg-user-dirs-gtk
 LANG=C xdg-user-dirs-gtk-update
