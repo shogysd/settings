@@ -11,19 +11,6 @@ if [ -f ~/.bashrc ]; then
     mv ~/.bashrc ~/.bashrcOLD
 fi
 
-############
-# download #
-############
-wget -O ~/.bashrc https://raw.githubusercontent.com/shogysd/settings/master/DOTbash_profile
-wget -O ~/.bash_script.bash https://raw.githubusercontent.com/shogysd/settings/master/DOTbash_script.bash
-wget -O ~/.emacs https://raw.githubusercontent.com/shogysd/settings/master/DOTemacs
-wget -O ~/.gitignore_global https://raw.githubusercontent.com/shogysd/settings/master/DOTgitignore_global
-wget -O ~/.git-completion.bash https://raw.githubusercontent.com/shogysd/git/master/contrib/completion/git-completion.bash
-wget -O ~/gitconfigscript.sh https://raw.githubusercontent.com/shogysd/settings/master/gitconfigscript.sh
-chmod 744 ~/gitconfigscript.sh
-wget -O ~/ssh_config.sh https://raw.githubusercontent.com/shogysd/settings/master/ssh_config.sh
-chmod 744 ~/ssh_config.sh
-
 ##################
 # update/upgrade #
 ##################
@@ -60,25 +47,21 @@ sudo apt-get -y install libappindicator1
 
 echo "--- setup ---"
 
+# unity-settings-daemon/gnome-settings-daemon のプラグインを有効にする
 dconf reset /org/gnome/settings-daemon/plugins/keyboard/active
+
 # CapsLockキーとCtrlキーを入れ替える
 # dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:swapcaps']"
-# CapsLockキーを追加のCtrlキーとして使う場合
+
+# CapsLockキーを追加のCtrlキーとして使う
 dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:nocaps']"
+
 # CapsLockキーの動作をデフォルトに戻す場合
 # dconf reset /org/gnome/desktop/input-sources/xkb-options
+
 
 # ディレクトリのカタカナを英字表記に
 sudo apt-get -y install xdg-user-dirs-gtk
 LANG=C xdg-user-dirs-gtk-update
 
-# gitの設定
-~/gitconfigscript.sh
-rm ~/gitconfigscript.sh
-
-# sshの設定
-~/ssh_config.sh
-rm ~/ssh_config.sh
-
-source ~/.bash_profile
 echo "<<< finish >>>"
