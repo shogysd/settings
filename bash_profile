@@ -36,6 +36,9 @@ export IGNOREEOF
 # virtualenvでpromptを変更しない
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
+# 標準のエディターをemacsに
+export EDITOR=emacs
+
 
 alias rm='rm -i'
 
