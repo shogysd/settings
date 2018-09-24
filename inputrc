@@ -1,6 +1,0 @@
-$if Bash
-
-# Ctrl+l でclearを実行
-"\C-l":'clear\n'
-
-$endif
