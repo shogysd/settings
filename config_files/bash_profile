@@ -11,7 +11,7 @@ source ~/.bash_script.bash
 # gitの入力補完
 source ~/.git-completion.bash
 
-PS1="\n\h  ( \$(-pathWriter) )\
+PS1="\n\u@\h  ( \$(-pathWriter) )\
 \$(-gitChecker)\
 \n[ \t\$(-envWriter) ] \$"
 
