@@ -23,7 +23,7 @@ if [ $start = "y" ]; then
 
     echo ""
     echo "gitignore_global ->"
-    ${download_command} ~/.gitignore_global https://raw.githubusercontent.com/shogysd/settings/master/gitignore_global
+    ${download_command} ~/.gitignore_global https://raw.githubusercontent.com/shogysd/settings/master/config_files/gitignore_global
 
     rm ~/.gitconfig > /dev/null 2>&1
 
