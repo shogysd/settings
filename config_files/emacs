@@ -92,8 +92,8 @@
         '(ac-candidate-face "gray50");; DropDownの非選択部背景
         '(ac-candidate-face "white");; DropDownの文字色
         '(ac-selection-face "gray20");; DropDownの選択部背景
-        '(show-paren-match-face "darkgray")
-        '(show-paren-match-face "black")
+        ;; '(show-paren-match-face "darkgray")
+        ;; '(show-paren-match-face "black")
         )
        default-frame-alist)
       )
@@ -121,7 +121,7 @@
 
 ;; 括弧の選択の背景色
 ;; デフォルトの色設定 -> #4f94cd
-(set-face-background 'show-paren-match-face "#454565")
+;; (set-face-background 'show-paren-match-face "#454565")
 ;; (set-face-foreground 'show-paren-match-face "black")
 
 ;; 現在行を目立たせる（背景色）
