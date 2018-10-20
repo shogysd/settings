@@ -31,7 +31,7 @@ client
 Host [name]
   RemoteForward 52698 127.0.0.1:52698
 ```
-and editor setting
+and install "Remote VSCode"
 
 ---
 server
