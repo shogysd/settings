@@ -1,4 +1,4 @@
-# sshcongig for macOS
+# sshconfig for macOS
 ```
 Host *
   UseKeychain yes
