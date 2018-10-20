@@ -35,7 +35,7 @@ and editor setting
 
 ---
 server
-``
+```
 $ wget -O ~/.rmate https://raw.githubusercontent.com/aurora/rmate/master/rmate
 $ chmod 744 ~/.rmate
 ```
