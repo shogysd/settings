@@ -10,6 +10,12 @@ source ~/.git-completion.bash
 
 ###############
 
+# rmateのalies
+if [ -f ~/.rmate ]; then
+    alias code='~/.rmate'
+fi
+
+###############
 
 PS1="\n\u @ \h  ( \$(-pathWriter) )\
 \$(-gitChecker)\
