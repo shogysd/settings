@@ -5,6 +5,11 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
+# rmateのalies
+if [ -f ~/.rmate ]; then
+    alias code='~/.rmate'
+fi
+
 # shの関数
 source ~/.bash_script.bash
 
