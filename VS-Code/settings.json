@@ -57,6 +57,8 @@
     "clock.dateFormat": "mmm dd yyyy HH:MM:ss",
     // insertDateString
     "insertDateString.format": "'Time-stamp: <'YYYY-MM-DD hh:mm:ss ZZZ'>'",
+    // remote vs code
+    "remote.onstartup": true,
     // C/C++
     "C_Cpp.clang_format_fallbackStyle": "Google",
     // python
