@@ -1,4 +1,5 @@
 # sshconfig for macOS
+path: ~/.ssh/config
 ```
 ServerAliveInterval 60
 
