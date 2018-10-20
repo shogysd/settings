@@ -1,9 +1,8 @@
 # sshconfig for macOS
 path: ~/.ssh/config
 ```
-ServerAliveInterval 60
-
 Host *
+  ServerAliveInterval 60
   UseKeychain yes
   AddKeysToAgent yes
   ForwardAgent yes
