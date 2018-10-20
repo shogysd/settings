@@ -26,7 +26,16 @@ Host [name]
 ```
 
 ## remote forward
+client
 ```
 Host [name]
   RemoteForward 52698 127.0.0.1:52698
+```
+and editor setting
+
+---
+server
+``
+$ wget -O ~/.rmate https://raw.githubusercontent.com/aurora/rmate/master/rmate
+$ chmod 744 ~/.rmate
 ```
