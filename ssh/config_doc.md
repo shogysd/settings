@@ -18,8 +18,8 @@ Host *
 
 ## host
 ```
-Host [ipaddr]
-  HostName [hostname]
+Host [name]
+  HostName [hostname or ipaddr]
   User [username]
   Port [port no]
   IdentityFile [key path]
