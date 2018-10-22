@@ -17,7 +17,7 @@ fi
 
 ###############
 
-PS1="\n\u @ \h  ( \$(-pathWriter) )\
+PS1="\n\u@\h  ( \$(-pathWriter) )\
 \$(-gitChecker)\
 \n[ \t\$(-envWriter) ] \$"
 
