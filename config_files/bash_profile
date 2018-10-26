@@ -13,7 +13,7 @@ source ~/.git-completion.bash
 
 PS1="\n\u@\h  ( \$(-pathWriter) )\
 \$(-gitChecker)\
-\n[ \t\$(-envWriter) ] \$"
+\n[ \t ]\$(-envWriter) \$"
 
 
 # 連続をしたコマンドを1度のみの記録に + スペースから始まるコマンドを無視
