@@ -252,7 +252,7 @@ function -gitChecker(){
 function -envWriter(){
     envpath=`echo -n $VIRTUAL_ENV | awk -F'/' '{printf $NF}'`
     if [ -n "${envpath}" ]; then
-        echo -n " < env: "
+        echo -n " < venv: "
         echo -n ${envpath}
         echo -n " >"
     fi
