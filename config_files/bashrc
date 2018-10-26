@@ -19,7 +19,7 @@ fi
 
 PS1="\n\u@\h  ( \$(-pathWriter) )\
 \$(-gitChecker)\
-\n[ \t\$(-envWriter) ] \$"
+\n[ \t ]\$(-envWriter) \$"
 
 
 # alias
