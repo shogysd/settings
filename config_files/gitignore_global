@@ -22,3 +22,6 @@
 
 # IDE(JetBrains)
 .idea
+
+# virtualenv
+venv
