@@ -49,8 +49,13 @@ if [ $start = "y" ]; then
 
     echo ""
     echo "When you execute the following command git's setup is completed!"
-    echo "git config --global user.name '[username]'"
-    echo "git config --global user.email '[useremail]'"
+    echo ""
+    echo "conf file: ~/.gitconfig"
+    echo ""
+    cat ~/.gitconfig | grep "name = "
+    echo "change: $git config --global user.name '[username]'"
+    cat ~/.gitconfig | grep "email = "
+    echo "change: $git config --global user.email '[useremail]'"
     echo ""
 
 elif [ $start = "n" ]; then
