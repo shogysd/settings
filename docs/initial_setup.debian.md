@@ -30,9 +30,9 @@ $ LANG=C xdg-user-dirs-gtk-update
 ```
 $ sudo apt-get install ibus-mozc
 ```
-設定 → Region&Language → 入力ソース → 英語(US) と 日本語(Mozc) に
-設定 → Keyboard → タイピング → インプットメソッドの切り替えキーを設定
-再起動
+設定 → Region&Language → 入力ソース → 英語(US) と 日本語(Mozc)  
+設定 → Keyboard → タイピング → インプットメソッドの切り替えキーを設定  
+再起動  
 
 
 ## 普段使用するユーザー側での作業
