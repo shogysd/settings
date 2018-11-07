@@ -38,8 +38,8 @@ $ sudo apt-get install ibus-mozc
 ## ターミナルの設定を更新
 ```
 $ \
-rm -f ~/.bash_bash_script.bash
-wget -O ~/.bash_bash_script.bash https://raw.githubusercontent.com/shogysd/settings/master/config_files/bash_script.bash
-source ~/.bash_bash_script.bash
+rm -f ~/.bash_bash_script.bash; \
+wget -O ~/.bash_bash_script.bash https://raw.githubusercontent.com/shogysd/settings/master/config_files/bash_script.bash; \
+source ~/.bash_bash_script.bash; \
 config-update
 ```
