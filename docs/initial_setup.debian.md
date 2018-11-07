@@ -35,10 +35,11 @@ $ sudo apt-get install ibus-mozc
 ```
 
 
-## 普段使用するユーザー側での作業
-[/initial_setup/setting.debian.sh](https://github.com/shogysd/settings/blob/master/initial_setup/setting.debian.sh) を実行する
+## ターミナルの設定を更新
 ```
-$ wget -O ~/setting.debian.sh https://raw.githubusercontent.com/shogysd/settings/master/initial_setup/setting.debian.sh
-$ chmod 744 ~/setting.debian.sh
-$ ~/setting.debian.sh | tee ~/setting.debian.sh.log
+$ \
+rm -f ~/.bash_bash_script.bash
+wget -O ~/.bash_bash_script.bash https://raw.githubusercontent.com/shogysd/settings/master/config_files/bash_script.bash
+source ~/.bash_bash_script.bash
+config-update
 ```
