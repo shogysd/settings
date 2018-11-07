@@ -43,3 +43,9 @@ wget -O ~/.bash_bash_script.bash https://raw.githubusercontent.com/shogysd/setti
 source ~/.bash_bash_script.bash; \
 config-update
 ```
+
+## インストール
+```
+$ \
+sudo apt-get install git; \
+```
