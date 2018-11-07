@@ -1,5 +1,14 @@
 # Setting
 
+## Run (bash config)
+```
+$ \
+rm -f ~/.bash_bash_script.bash; \
+wget -O ~/.bash_bash_script.bash https://raw.githubusercontent.com/shogysd/settings/master/config_files/bash_script.bash; \
+source ~/.bash_bash_script.bash; \
+config-update
+```
+
 ## Run (Linux full-setup)
 ```
 $ su
