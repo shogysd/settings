@@ -53,9 +53,9 @@ if [ $start = "y" ]; then
     echo "conf file: ~/.gitconfig"
     echo ""
     cat ~/.gitconfig | grep "name = "
-    echo "change: $git config --global user.name '[username]'"
+    echo "change: $ git config --global user.name '[username]'"
     cat ~/.gitconfig | grep "email = "
-    echo "change: $git config --global user.email '[useremail]'"
+    echo "change: $ git config --global user.email '[useremail]'"
     echo ""
 
 elif [ $start = "n" ]; then
