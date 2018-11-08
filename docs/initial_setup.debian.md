@@ -63,6 +63,8 @@ id_rsa.pub: 公開鍵
 
 ### ~/.ssh/config
 ```
+ServerAliveInterval 60
+
 Host *
   AddKeysToAgent yes
   ForwardAgent yes
