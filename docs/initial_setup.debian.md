@@ -54,6 +54,26 @@ $ ibus-setup
 再起動
 ```
 
+### 公開鍵
+```
+$ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
+id_rsa: 秘密鍵
+id_rsa.pub: 公開鍵
+```
+
+### ~/.ssh/config
+```
+Host *
+  AddKeysToAgent yes
+  ForwardAgent yes
+  HostKeyAlgorithms +ssh-dss
+```
+```
+Host [name]
+  HostName [ip]
+  RemoteForward 52698 localhost:52698
+```
+
 
 ## ターミナルの設定を更新
 ```
