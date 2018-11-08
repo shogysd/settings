@@ -54,7 +54,7 @@ $ ibus-setup
 再起動
 ```
 
-### 公開鍵
+### 鍵の設定
 ```
 $ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
 id_rsa: 秘密鍵
