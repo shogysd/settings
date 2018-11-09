@@ -28,6 +28,7 @@ $ LANG=C xdg-user-dirs-gtk-update
 
 ### capsLockの扱い
 ```
+GNOME
 # CapsLockキーとCtrlキーを入れ替える
 dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:swapcaps']"
 
@@ -36,6 +37,11 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:nocaps']"
 
 # CapsLockキーの動作をデフォルトに戻す場合
 dconf reset /org/gnome/desktop/input-sources/xkb-options
+```
+```
+cinnamon (コマンドではなぜかうまく行かなかった)
+設定（コントロールセンター） → ハードウェア → キーボード → レイアウト → オプション(O)... → Ctrlキーの位置
+
 ```
 
 ### 日本語入力を有効にする
