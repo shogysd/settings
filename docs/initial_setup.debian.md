@@ -43,15 +43,17 @@ dconf reset /org/gnome/desktop/input-sources/xkb-options
 $ sudo apt-get install ibus-mozc
 $ sudo apt-get install ibus-gtk ibus-gtk3 ibus-qt4
 
-# iBus設定
-$ ibus-setup
-
 # cinnamon
 
 # GNOME3
-設定 → Region&Language → 入力ソース → 英語(US) と 日本語(Mozc)
-設定 → Keyboard → タイピング → インプットメソッドの切り替えキーを設定
+設定 → Region&Language → 入力ソース → 日本語(Mozc)のみにする
+設定 → Keyboard → タイピング → インプットメソッドの切り替えキーを設定 → 押さそうなやつにする
+Mozcプロパティー → 一般 → キー設定 → 編集 → 各モード（変換前入力中とか）のIME有効化・無効化を好きなキーバインドに変更
+
 再起動
+
+# iBus設定を開くとしたら
+# $ ibus-setup
 ```
 
 ### 鍵の設定
