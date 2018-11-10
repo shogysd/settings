@@ -10,8 +10,8 @@
 ## PATH
 | OS | PATH |
 | :-: | :-- |
-| Debian | - |
-| macOS X | ~/Library/Application Support/Code/User |
+| Debian | ~/.config/Code/User/ |
+| macOS X | ~/Library/Application Support/Code/User/ |
 
 ## パッケージ
 https://marketplace.visualstudio.com/vscode
