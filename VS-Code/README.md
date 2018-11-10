@@ -25,6 +25,9 @@ https://marketplace.visualstudio.com/vscode
 ### パッケージをインストール (CUIから)
 ```
 $ \
-code --install-extension mosapride.zenkaku
-code --install-extension 
+code --install-extension mosapride.zenkaku; \
+code --install-extension garaemon.vscode-emacs-tab; \
+code --install-extension Compulim.vscode-clock; \
+code --install-extension rafaelmaiolla.remote-vscode; \
+code --install-extension ms-python.python; \
 ```
