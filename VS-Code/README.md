@@ -21,3 +21,10 @@ https://marketplace.visualstudio.com/vscode
 | zenkaku | 全角の可視化 | https://marketplace.visualstudio.com/items?itemName=mosapride.zenkaku |
 | vscode-emacs-tab | Tabの挙動 | https://marketplace.visualstudio.com/items?itemName=garaemon.vscode-emacs-tab |
 | Clock in status bar | ステータスバーに時間を表示 | https://marketplace.visualstudio.com/items?itemName=Compulim.vscode-clock |
+
+### パッケージをインストール (CUIから)
+```
+$ \
+code --install-extension mosapride.zenkaku
+code --install-extension 
+```
