@@ -1,17 +1,12 @@
 # Visual Studio Code の設定
 
 ## 種類
-| ファイル名 | 内容 |
-| :-: | :-- |
-| settings.json | ユーザー設定（デフォルトの上書き内容） |
-| locale.json | 言語情報 |
-| keybindings.json | キーバインドの情報 |
-
-## PATH
-| OS | PATH |
-| :-: | :-- |
-| Debian | ~/.config/Code/User/ |
-| macOS X | ~/Library/Application Support/Code/User/ |
+macOSで 'code' コマンドをインストール
+```
+vs code 上で command + shift + p
+Shell で検索
+インストール
+```
 
 ## パッケージ
 https://marketplace.visualstudio.com/vscode
