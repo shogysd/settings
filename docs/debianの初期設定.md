@@ -110,4 +110,6 @@ sudo apt-get -y install git; \
 sudo apt-get -y install make; \
 sudo apt-get -y install curl; \
 sudo apt-get -y install linux-headers-amd64; \
+sudo apt-get -y install chromium; \
+sudo apt-get -y install screen; \
 ```
