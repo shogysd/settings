@@ -1,0 +1,14 @@
+# KVMの設定 (debian)
+
+## インストールする
+```
+$ \
+sudo apt-get install -y qemu-kvm; \
+sudo apt-get install -y libvirt0; \
+sudo apt-get install -y virt-manager
+```
+
+## 権限の付与
+```
+$ sudo adduser [user-name] libvirt
+```
