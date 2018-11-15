@@ -25,6 +25,11 @@
 $ sudo apt-get install xdg-user-dirs-gtk
 $ LANG=C xdg-user-dirs-gtk-update
 ```
+上記作業後に "Configured directory for incoming files does not exists" と出る場合
+```
+$ gsettings set org.blueman.transfer shared-path '/home/[user-name]/Downloads/'
+```
+bluetooth manager → 表示 → ローカルサービス → 転送 → Incoming Folder → ディレクトリを確認
 
 ### capsLockの扱い
 ```
@@ -39,7 +44,7 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:nocaps']"
 dconf reset /org/gnome/desktop/input-sources/xkb-options
 ```
 ```
-cinnamon (コマンドではなぜかうまく行かなかった)
+cinnamon (UIから)
 設定（コントロールセンター） → ハードウェア → キーボード → レイアウト → オプション(O)... → Ctrlキーの位置
 
 ```
