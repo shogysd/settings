@@ -96,6 +96,18 @@ Host [name]
   RemoteForward 52698 localhost:52698
 ```
 
+## 電力の最適化
+```
+$ sudo apt-get install powertop
+$ sudo apt-get install tlp
+```
+```
+$ sudo powertop
+の Tuneables が Good だといい感じになっている
+
+tlp はインストールすると起動時に自動でそのへんを設定してくれる
+
+
 
 ## ターミナルの設定を更新
 ```
