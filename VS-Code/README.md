@@ -27,4 +27,5 @@ code --install-extension rafaelmaiolla.remote-vscode; \
 code --install-extension jsynowiec.vscode-insertdatestring; \
 code --install-extension ms-python.python; \
 code --install-extension ms-vscode.cpptools; \
+code --install-extension github.vscode-pull-request-github; \
 ```
