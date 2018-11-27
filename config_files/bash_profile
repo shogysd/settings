@@ -5,16 +5,8 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
-# shの関数
-source ~/.bash_script.bash
-
-# gitの入力補完
-source ~/.git-completion.bash
-
-PS1="\n\u@\h  ( \$(-pathWriter) )\
-\$(-gitChecker)\
-\n[ \t ]\$(-envWriter) \$"
-
+PS1="\n\u@\h !! bashrc err !!\
+\n\$"
 
 # 連続をしたコマンドを1度のみの記録に + スペースから始まるコマンドを無視
 export HISTCONTROL=ignoreboth
@@ -38,21 +30,6 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # 標準のエディターをemacsに
 export EDITOR=emacs
-
-
-alias rm='rm -i'
-
-# OS依存
-os=`uname 2>&1`
-if [ ${os} = "Darwin" ]; then
-    # macOS
-    alias ls='ls -G'
-    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
-    alias sema='sudo /Applications/Emacs.app/Contents/MacOS/Emacs'
-else
-    # Linux ${os} = "Linux"
-    alias sema='sudo emacs'
-fi
 
 # GOPATH
 export GOPATH=$HOME/gopath_global
