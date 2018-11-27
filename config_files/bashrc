@@ -16,8 +16,15 @@ if [ $SHLVL = 1 ] && [ -f ~/.screenrc ]; then
     screen
 fi
 
+
 PS1="\n\u@\h  ( \$(-pathWriter) )\$(-gitChecker)\
 \n[ `screen -ls | grep Attached | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'` ]\$(-envWriter) \$"
+
+screen -ls | grep -e '(' -e ')' | tr '.' ' ' | awk '{print $1, $2, $4}' | echo -ne "\033[32m`grep Attached`\033[0;39m"
+screen -ls | grep -e '(' -e ')' | tr '.' ' ' | awk '{print $1, $2, $4}' | grep -v Attached
+
+
+#==================================================#
 
 
 # alias
