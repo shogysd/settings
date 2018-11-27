@@ -1,19 +1,10 @@
 # Time-stamp: <Thu May 31 21:48:09 JST 2018>
 
-# ~/.bashrcをターミナル起動時に読み込ませる
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
-
-PS1="\n\u@\h !! bashrc err !!\
-\n\$"
-
 # 連続をしたコマンドを1度のみの記録に + スペースから始まるコマンドを無視
 export HISTCONTROL=ignoreboth
 
 # 履歴に保存しないコマンド
 export HISTIGNORE=clear
-
 
 # 履歴のサイズを変更
 export HISTSIZE=30000
@@ -33,3 +24,14 @@ export EDITOR=emacs
 
 # GOPATH
 export GOPATH=$HOME/gopath_global
+
+
+# ------------------------------ #
+
+# ~/.bashrcをターミナル起動時に読み込ませる
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+PS1="\n\u@\h !! bashrc err !!\
+\n\$"
