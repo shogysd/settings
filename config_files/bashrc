@@ -1,25 +1,24 @@
 # Time-stamp: <Thu May 31 21:57:19 JST 2018>
 
-###############
-
 # shの関数
 source ~/.bash_script.bash
 
 # gitの入力補完
 source ~/.git-completion.bash
 
-###############
-
 # rmateのalies
 if [ -f ~/.rmate ]; then
     alias code='~/.rmate'
 fi
 
-###############
+# screenの自動起動
+if [ $SHLVL = 1 ] && [ -f ~/.screenrc ]; then
+    screen
+fi
 
 PS1="\n\u@\h  ( \$(-pathWriter) )\
 \$(-gitChecker)\
-\n[ \t ]\$(-envWriter) \$"
+\n[ `screen -ls | grep Attached | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'` ]\$(-envWriter) \$"
 
 
 # alias
@@ -39,8 +38,6 @@ else
     # Linux ${os} = "Linux"
     alias sema='sudo emacs'
 fi
-
-
 
 # C++
 alias clpp='clang++ -std=c++14'
