@@ -16,8 +16,7 @@ if [ $SHLVL = 1 ] && [ -f ~/.screenrc ]; then
     screen
 fi
 
-PS1="\n\u@\h  ( \$(-pathWriter) )\
-\$(-gitChecker)\
+PS1="\n\u@\h  ( \$(-pathWriter) )\$(-gitChecker)\
 \n[ `screen -ls | grep Attached | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'` ]\$(-envWriter) \$"
 
 
