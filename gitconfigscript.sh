@@ -46,10 +46,7 @@ if [ $start = "y" ]; then
     git config --global alias.sub-clone 'submodule update --init --recursive'
     git config --global alias.wdiff 'diff --word-diff'
 
-
-    echo ""
-    echo "When you execute the following command git's setup is completed!"
-    echo ""
+    echo "complete!!"
     echo "conf file: ~/.gitconfig"
     echo ""
     
@@ -58,9 +55,9 @@ if [ $start = "y" ]; then
     cat ~/.gitconfig | grep "email = " | cut -b 2-
     
     echo ""
-    echo "change: $ git config --global user.name '[username]'"
-    echo "change: $ git config --global user.email '[useremail]'"
-    echo ""
+    echo "change or update"
+    echo "$ git config --global user.name '[username]'"
+    echo "$ git config --global user.email '[useremail]'"
 
 elif [ $start = "n" ]; then
     echo "EXIT"
