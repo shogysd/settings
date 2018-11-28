@@ -6,7 +6,7 @@ if [ ${os} = "Darwin" ]; then
     # macOS
     emacs_PATH='/Applications/Emacs.app/Contents/MacOS/Emacs'
     esc_key='\033'
-    download_command='curl -# -o'
+    download_command='curl -o'
     git_command_path='/usr/bin/git'
 else
     # Linux ${os} = "Linux"
