@@ -298,6 +298,12 @@ function -screenPrinter(){
 }
 
 
+function -screenSessionPrinter(){
+    screen -ls | grep -e '(' -e ')' | tr '.' ' ' | awk '{print $1, $2, $4}' | echo -e "${esc_key}[32m`grep Attached`${esc_key}[0;39m"
+    screen -ls | grep -e '(' -e ')' | tr '.' ' ' | awk '{print $1, $2, $4}' | grep -v Attached
+}
+
+
 #==================================================#
 
 url_common='https://raw.githubusercontent.com/shogysd/settings/master/'
