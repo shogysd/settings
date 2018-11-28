@@ -56,9 +56,6 @@ if [ $start = "y" ]; then
     echo "user email: `cat ~/.gitconfig | grep "email = " | cut -b 2-`"
     echo ""
 
-    echo -n "setup user-name and user-email?: y-or-n: "
-    read gitconfigupdate
-    echo ""
     echo "change or update"
     echo "$ git config --global user.name '[username]'"
     echo "$ git config --global user.email '[useremail]'"
