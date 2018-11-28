@@ -17,11 +17,12 @@ fi
 
 echo ""
 echo "update file: .gitconfig"
+echo ""
 echo -n "start update?: y-or-n: "
 read start
 if [ $start = "y" ]; then
 
-    echo -n "cleanup gitconfig ?: y-or-n: "
+    echo -n "cleanup gitconfig?: y-or-n: "
     read cleanup
     if [ $cleanup = "y" ]; then
         rm ~/.gitconfig > /dev/null 2>&1
@@ -51,9 +52,13 @@ if [ $start = "y" ]; then
     echo ""
     echo "conf file: ~/.gitconfig"
     echo ""
-    cat ~/.gitconfig | grep "name = "
+    
+    echo "Current user info..."
+    cat ~/.gitconfig | grep "name = " | cut -b 2-
+    cat ~/.gitconfig | grep "email = " | cut -b 2-
+    
+    echo ""
     echo "change: $ git config --global user.name '[username]'"
-    cat ~/.gitconfig | grep "email = "
     echo "change: $ git config --global user.email '[useremail]'"
     echo ""
 
