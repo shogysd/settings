@@ -46,6 +46,7 @@ if [ $start = "y" ]; then
     git config --global alias.sub-clone 'submodule update --init --recursive'
     git config --global alias.wdiff 'diff --word-diff'
 
+    echo ""
     echo "complete!!"
     echo "conf file: ~/.gitconfig"
     echo ""
