@@ -62,19 +62,9 @@ if [ $start = "y" ]; then
     echo -n "setup user-name and user-email?: y-or-n: "
     read gitconfigupdate
     echo ""
-    if [ ${gitconfigupdate} = "y" ]; then
-        echo -n "git global user.name: "
-        read gitusername
-        echo -n "git global user.email: "
-        read gituseremail
-        git config --global user.name '${gitusername}'
-        git config --global user.email '${gituseremail}'
-    else
-        echo ""
-        echo "change or update"
-        echo "$ git config --global user.name '[username]'"
-        echo "$ git config --global user.email '[useremail]'"
-    fi
+    echo "change or update"
+    echo "$ git config --global user.name '[username]'"
+    echo "$ git config --global user.email '[useremail]'"
 
 elif [ $start = "n" ]; then
     echo "EXIT"
