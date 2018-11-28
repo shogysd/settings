@@ -331,12 +331,18 @@ function config-update(){
 
         for i in `seq 0 1 ${update_files_len}`
         do
+            echo "${update_files[i]}"
             ${download_command} ~/.${update_files[i]} ${url_common}config_files/${update_files[i]}
+            echo ""
         done
 
+        echo "git-completion.bash"
         ${download_command} ~/.git-completion.bash https://raw.githubusercontent.com/shogysd/git/master/contrib/completion/git-completion.bash
-
+        echo ""
+        
+        echo "gitconfigscript.sh"
         ${download_command} ~/gitconfigscript.sh ${url_common}gitconfigscript.sh
+        echo ""
         chmod 744 ~/gitconfigscript.sh
         ~/gitconfigscript.sh
         \rm ~/gitconfigscript.sh
