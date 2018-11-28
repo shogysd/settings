@@ -33,6 +33,3 @@ export GOPATH=$HOME/gopath_global
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
-
-screen -ls | grep -e '(' -e ')' | tr '.' ' ' | awk '{print $1, $2, $4}' | echo -e "\033[32m`grep Attached`\033[0;39m"
-screen -ls | grep -e '(' -e ')' | tr '.' ' ' | awk '{print $1, $2, $4}' | grep -v Attached
