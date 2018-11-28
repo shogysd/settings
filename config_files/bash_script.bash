@@ -1,7 +1,6 @@
 # Time-stamp: <Mon Sep 17 13:21:50 JST 2018>
 
 os=`uname 2>&1`
-rm_path=`which rm`
 
 if [ ${os} = "Darwin" ]; then
     # macOS
@@ -166,15 +165,15 @@ function ema(){
 function flush(){
     ls -A *~ &> /dev/null
     if [ $? = 0 ]; then
-        ${rm_path} *~
+        \rm *~
     fi
     ls -A .*~ &> /dev/null
     if [ $? = 0 ]; then
-        ${rm_path} .*~
+        \rm .*~
     fi
     ls -A \#*\# &> /dev/null
     if [ $? = 0 ]; then
-        ${rm_path} \#*\#
+        \rm \#*\#
     fi
 }
 
