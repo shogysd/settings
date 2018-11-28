@@ -13,15 +13,14 @@ fi
 
 # screenの自動起動
 if [ $SHLVL = 1 ] && [ -f ~/.screenrc ]; then
-    screen
+    -screenStarter
 fi
 
 
 PS1="\n\u@\h  ( \$(-pathWriter) )\$(-gitChecker)\
-\n[ `screen -ls | grep Attached | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'` ]\$(-envWriter) \$"
+\n[ \$(-screenPrinter) ]\$(-envWriter) \$"
 
-screen -ls | grep -e '(' -e ')' | tr '.' ' ' | awk '{print $1, $2, $4}' | echo -e "\033[32m`grep Attached`\033[0;39m"
-screen -ls | grep -e '(' -e ')' | tr '.' ' ' | awk '{print $1, $2, $4}' | grep -v Attached
+-screenSessionPrinter
 
 
 #==================================================#
