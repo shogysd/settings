@@ -315,32 +315,34 @@ function config-update(){
     read start
     echo ""
     if [ $start = "y" ]; then
-        ${rm_path} ~/.bash_profile ~/.bashrc ~/.bash_script.bash ~/.gitignore-switch.bash ~/.screenrc ~/.emacs ~/.git-completion.bash
-        echo ""
-        echo "bash_profile ->"
-        ${download_command} ~/.bash_profile ${url_common}config_files/bash_profile
-        echo ""
-        echo "bashrc ->"
-        ${download_command} ~/.bashrc ${url_common}config_files/bashrc
-        echo ""
-        echo "bach_script ->"
-        ${download_command} ~/.bash_script.bash ${url_common}config_files/bash_script.bash
-        echo ""
-        echo "screenrc ->"
-        ${download_command} ~/.screenrc ${url_common}config_files/screenrc
-        echo ""
-        echo "emacs ->"
-        ${download_command} ~/.emacs ${url_common}config_files/emacs
-        echo ""
-        echo "git-completion.bash ->"
+    
+        update_files=("bash_profile"\
+        "bashrc"\
+        "bash_script.bash"\
+        "screenrc"\
+        "emacs")
+        
+        update_files_len=`expr ${#update_files[@]} - 1`
+        
+        for i in `seq 0 1 ${update_files_len}`
+        do
+            \rm ~/.${update_files[i]}
+        done
+
+        for i in `seq 0 1 ${update_files_len}`
+        do
+            ${download_command} ~/.${update_files[i]} ${url_common}config_files/${update_files[i]}
+        done
+
         ${download_command} ~/.git-completion.bash https://raw.githubusercontent.com/shogysd/git/master/contrib/completion/git-completion.bash
-        echo ""
-        echo "gitconfigscript.sh ->"
+
         ${download_command} ~/gitconfigscript.sh ${url_common}gitconfigscript.sh
         chmod 744 ~/gitconfigscript.sh
         ~/gitconfigscript.sh
-        ${rm_path} ~/gitconfigscript.sh
+        \rm ~/gitconfigscript.sh
+
         source ~/.bash_profile
+
     elif [ $start = "n" ]; then
         echo "EXIT"
     else
