@@ -21,12 +21,12 @@ echo -n "start update?: y-or-n: "
 read start
 if [ $start = "y" ]; then
 
-    echo ""
-    echo "gitignore_global ->"
-    ${download_command} ~/.gitignore_global https://raw.githubusercontent.com/shogysd/settings/master/config_files/gitignore_global
-
-    rm ~/.gitconfig > /dev/null 2>&1
-
+    echo -n "cleanup gitconfig ?: y-or-n: "
+    read cleanup
+    if [ $cleanup = "y" ]; then
+        rm ~/.gitconfig > /dev/null 2>&1
+    fi
+    
     git config --global core.excludesfile ~/.gitignore_global
     git config --global core.editor emacs
     git config --global core.pager less
@@ -34,7 +34,6 @@ if [ $start = "y" ]; then
     git config --global core.autocrlf input
     git config --global push.default nothing
     # git config --global push.default simple
-
 
     git config --global alias.co 'checkout'
     git config --global alias.st 'status'
