@@ -274,6 +274,30 @@ function -envWriter(){
 }
 
 
+function -screenStarter(){
+    # Linuxのみ自動起動
+    if [ ${os} = "Linux" ]; then
+        screen
+    fi
+}
+
+
+function -screenPrinter(){
+    if [ ${os} = "Darwin" ]; then
+        echo "Darwin"
+    else
+        v_pts_no=`tty | cut -b 6-`
+        screen_pts_no_edited=`w | grep ${v_pts_no} | tr ':' ' ' | awk '{print $3}'`
+        echo ${screen_pts_no_edited} | grep "pts" > /dev/null
+        if [ $? = 0 ]; then
+            screen_pts_edited=`w | grep ":${screen_pts_no_edited}:" | tr ':' ' ' | tr '/' ' ' | awk '{printf "%s-%s", $1, $2}'`
+        else
+            echo "out of screen session"
+        fi
+    fi
+}
+
+
 #==================================================#
 
 url_common='https://raw.githubusercontent.com/shogysd/settings/master/'
