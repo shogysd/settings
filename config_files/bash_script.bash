@@ -320,7 +320,8 @@ function config-update(){
         "bashrc"\
         "bash_script.bash"\
         "screenrc"\
-        "emacs")
+        "emacs"\
+        "gitignore_global")
         
         update_files_len=`expr ${#update_files[@]} - 1`
         
