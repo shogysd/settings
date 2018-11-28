@@ -54,9 +54,11 @@ if [ $start = "y" ]; then
     echo "Current user info..."
     echo -n "user name: "
     cat ~/.gitconfig | grep "name = " | cut -b 2-
+    echo ""
     echo -n "user email: "
     cat ~/.gitconfig | grep "email = " | cut -b 2-
-    
+    echo ""
+
     echo -n "setup user-name and user-email?: y-or-n: "
     read gitconfigupdate
     echo ""
