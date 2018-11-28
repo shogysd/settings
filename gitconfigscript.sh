@@ -16,15 +16,13 @@ else
 fi
 
 echo ""
-echo "update file: .gitconfig"
-echo ""
-echo -n "start update?: y-or-n: "
+echo -n "start update ~/.gitconfig?: y-or-n: "
 read start
 if [ $start = "y" ]; then
 
-    echo -n "cleanup gitconfig?: y-or-n: "
-    read cleanup
-    if [ $cleanup = "y" ]; then
+    echo -n "flush gitconfig?: y-or-n: "
+    read flushgitconfig
+    if [ ${flushgitconfig} = "y" ]; then
         rm ~/.gitconfig > /dev/null 2>&1
     fi
     
