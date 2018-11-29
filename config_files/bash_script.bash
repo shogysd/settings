@@ -275,7 +275,7 @@ function -envWriter(){
 
 function -screenStarter(){
     # Linuxのみ自動起動
-    if [ ${os} = "Linux" ]; then
+    if [ "${SSH_CONNECTION}" != "" ]; then
         screen
     fi
 }
