@@ -294,6 +294,7 @@ function -screenPrinter(){
         screen -ls | grep "Attached" | grep `expr ${PPID} - ${rgument_for_adjustment}` > /dev/null
         if [ $? = 0 ]; then
             screen -ls | grep "Attached" | grep `expr ${PPID} - ${rgument_for_adjustment}` | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'
+            return 0
         else
             for counter in `seq 1 3`;
             do
@@ -301,12 +302,14 @@ function -screenPrinter(){
                 screen -ls | grep "Attached" | grep ${predicted_id} > /dev/null
                 if [ $? = 0 ]; then
                     screen -ls | grep ${pretected_id} | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'
-                    return
+                    echo -n " (estimated)"
+                    return 0
                 fi
             done
+            echo -ne "PPID: ${PPID}"
         fi
     else
-        echo -n "---"
+        tty | cut -b 6-
     fi
 }
 
