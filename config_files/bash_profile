@@ -33,3 +33,7 @@ export GOPATH=$HOME/gopath_global
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
+
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
