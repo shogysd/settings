@@ -12,6 +12,10 @@ else
     alias sema='sudo emacs'
 fi
 
+if [ -f ~/.rmate ]; then
+    alias code='~/.rmate'
+fi
+
 alias py='python3'
 alias grep='grep --color=auto'
 alias rm='rm -i'
