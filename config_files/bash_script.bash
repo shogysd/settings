@@ -334,6 +334,8 @@ function config-update(){
     
         update_files=("bash_profile"\
         "bashrc"\
+        "bash_environments"\
+        "bash_aliases"\
         "bash_script.bash"\
         "screenrc"\
         "emacs"\
