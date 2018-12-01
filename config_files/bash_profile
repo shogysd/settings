@@ -1,35 +1,5 @@
 # Time-stamp: <Thu May 31 21:48:09 JST 2018>
 
-# 連続をしたコマンドを1度のみの記録に + スペースから始まるコマンドを無視
-export HISTCONTROL=ignoreboth
-
-# 履歴に保存しないコマンド
-export HISTIGNORE=clear
-
-# 履歴のサイズを変更
-export HISTSIZE=30000
-
-# 履歴のフォーマットを設定
-export HISTTIMEFORMAT='%Y-%m-%d %T   '
-
-# Ctrl-dを1回無視する（2回で反応）
-IGNOREEOF=1
-export IGNOREEOF
-
-# virtualenvでpromptを変更しない
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-# 標準のエディターをemacsに
-export EDITOR=emacs
-
-# GOPATH
-export GOPATH=$HOME/gopath_global
-
-
-#==================================================#
-
-
-# ~/.bashrcをターミナル起動時に読み込ませる
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
