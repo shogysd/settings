@@ -330,11 +330,16 @@
 ;; 行末の空白を削除
 (global-set-key (kbd "M-`") 'delete-trailing-whitespace)
 
+;; カーソルを動かさずにスクロール
+(global-set-key "\M-n" (lambda ()(interactive) (scroll-up 3)))
+
+
+
 ;; フレーム単位のスクロール（上）
-(global-set-key (kbd "M-p") 'scroll-down-command)
+;; (global-set-key (kbd "M-p") 'scroll-down-command)
 
 ;; フレーム単位のスクロール（下）
-(global-set-key (kbd "M-n") 'scroll-up-command)
+;; (global-set-key (kbd "M-n") 'scroll-up-command)
 
 ;; 単語単位で移動（前）
 (global-set-key (kbd "M-f") 'forward-word)
