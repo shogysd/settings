@@ -12,12 +12,6 @@ if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
 
-# rmateのalies
-if [ -f ~/.rmate ]; then
-    alias code='~/.rmate'
-fi
-
-# screenの自動起動
 if [ $SHLVL = 1 ] && [ -f ~/.screenrc ]; then
     -screenStarter
 fi
@@ -27,37 +21,3 @@ PS1="\n\u@\h  ( \$(-pathWriter) )\$(-gitChecker)\
 \n[ \$(-screenPrinter) ]\$(-envWriter) \$"
 
 -screenSessionPrinter
-
-
-#==================================================#
-
-
-# alias
-alias python='python3'
-alias py='python3'
-alias grep='grep --color=auto'
-alias rm='rm -i'
-alias ls='ls --color=auto'
-alias dir='dir --color=auto'
-alias ll='ls -l'
-alias la='ls -A'
-
-# OS依存
-os=`uname 2>&1`
-if [ ${os} = "Darwin" ]; then
-    # macOS
-    alias ls='ls -G'
-    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
-    alias sema='sudo /Applications/Emacs.app/Contents/MacOS/Emacs'
-else
-    # Linux ${os} = "Linux"
-    alias sema='sudo emacs'
-fi
-
-# C++
-alias clpp='clang++ -std=c++14'
-alias clpp11='clang++ -std=c++11'
-alias clpp14='clang++ -std=c++14'
-alias gpp='g++ -std=c++14'
-alias gpp11='g++ -std=c++11'
-alias gpp14='g++ -std=c++14'
