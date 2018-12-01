@@ -1,10 +1,16 @@
 # Time-stamp: <Thu May 31 21:57:19 JST 2018>
 
-# shの関数
-source ~/.bash_script.bash
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
-# gitの入力補完
-source ~/.git-completion.bash
+if [ -f ~/.bash_script.bash ]; then
+    . ~/.bash_script.bash
+fi
+
+if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+fi
 
 # rmateのalies
 if [ -f ~/.rmate ]; then
@@ -31,6 +37,10 @@ alias python='python3'
 alias py='python3'
 alias grep='grep --color=auto'
 alias rm='rm -i'
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
+alias ll='ls -l'
+alias la='ls -A'
 
 # OS依存
 os=`uname 2>&1`
