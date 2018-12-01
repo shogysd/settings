@@ -1,0 +1,27 @@
+# Time-stamp: <Thu May 31 21:57:19 JST 2018>
+
+os=`uname 2>&1`
+if [ ${os} = "Darwin" ]; then
+    # macOS
+    alias ls='ls -G'
+    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+    alias sema='sudo /Applications/Emacs.app/Contents/MacOS/Emacs'
+else
+    # Linux ${os} = "Linux"
+    alias ls='ls --color=auto'
+    alias sema='sudo emacs'
+fi
+
+alias py='python3'
+alias grep='grep --color=auto'
+alias rm='rm -i'
+alias dir='dir --color=auto'
+alias ll='ls -l'
+alias la='ls -A'
+alias py='python3'
+alias clpp='clang++ -std=c++14'
+alias clpp11='clang++ -std=c++11'
+alias clpp14='clang++ -std=c++14'
+alias gpp='g++ -std=c++14'
+alias gpp11='g++ -std=c++11'
+alias gpp14='g++ -std=c++14'
