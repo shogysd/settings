@@ -283,16 +283,30 @@ function -screenStarter(){
 
 function -screenPrinter(){
     if [ ${os} = "Darwin" ]; then
-        echo "Darwin"
+        argument_for_adjustment='1'
     else
-        v_pts_no=`tty | cut -b 6-`
-        screen_pts_no_edited=`w | grep ${v_pts_no} | tr ':' ' ' | awk '{print $3}'`
-        echo ${screen_pts_no_edited} | grep "pts" > /dev/null
+        # Linux
+        rgument_for_adjustment='0'
+    fi
+
+    screen -ls | grep "Attached" > /dev/null
+    if [ $? = 0 ]; then
+        screen -ls | grep "Attached" | grep `expr ${PPID} - ${rgument_for_adjustment}` > /dev/null
         if [ $? = 0 ]; then
-            screen_pts_edited=`w | grep ":${screen_pts_no_edited}:" | tr ':' ' ' | tr '/' ' ' | awk '{printf "%s-%s", $1, $2}'`
+            screen -ls | grep "Attached" | grep `ecpr ${PPID} - ${rgument_for_adjustment}` | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'
         else
-            echo "out of screen session"
+            for counter in `seq 1 3`;
+            do
+                predicted_id=`expr ${PPID} - ${rgument_for_adjustment} - ${counter}`
+                screen -ls | grep "Attached" | grep ${predicted_id} > /dev/null
+                if [ $? = 0 ]; then
+                    screen -ls | grep ${pretected_id} | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'
+                    return
+                fi
+            done
         fi
+    else
+        echo -n "---"
     fi
 }
 
