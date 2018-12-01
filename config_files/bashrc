@@ -1,5 +1,9 @@
 # Time-stamp: <Thu May 31 21:57:19 JST 2018>
 
+if [ -f ~/.bash_environments ]; then
+    . ~/.bash_environments
+fi
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
