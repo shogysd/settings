@@ -286,14 +286,14 @@ function -screenPrinter(){
         argument_for_adjustment='1'
     else
         # Linux
-        rgument_for_adjustment='0'
+        argument_for_adjustment='0'
     fi
 
     screen -ls | grep "Attached" > /dev/null
     if [ $? = 0 ]; then
-        screen -ls | grep "Attached" | grep `expr ${PPID} - ${rgument_for_adjustment}` > /dev/null
+        screen -ls | grep "Attached" | grep `expr ${PPID} - ${argument_for_adjustment}` > /dev/null
         if [ $? = 0 ]; then
-            screen -ls | grep "Attached" | grep `expr ${PPID} - ${rgument_for_adjustment}` | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'
+            screen -ls | grep "Attached" | grep `expr ${PPID} - ${argument_for_adjustment}` | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'
             return 0
         else
             for counter in `seq 1 3`;
