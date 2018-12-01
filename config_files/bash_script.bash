@@ -293,7 +293,7 @@ function -screenPrinter(){
     if [ $? = 0 ]; then
         screen -ls | grep "Attached" | grep `expr ${PPID} - ${rgument_for_adjustment}` > /dev/null
         if [ $? = 0 ]; then
-            screen -ls | grep "Attached" | grep `ecpr ${PPID} - ${rgument_for_adjustment}` | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'
+            screen -ls | grep "Attached" | grep `expr ${PPID} - ${rgument_for_adjustment}` | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'
         else
             for counter in `seq 1 3`;
             do
