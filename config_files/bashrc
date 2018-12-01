@@ -18,7 +18,7 @@ fi
 
 
 PS1="\n\u@\h  ( \$(-pathWriter) )\$(-gitChecker)\
-\n[ `tty | cut -b 6-` ]\$(-envWriter) \$"
+\n[ \$(-screenPrinter) ]\$(-envWriter) \$"
 
 -screenSessionPrinter
 
