@@ -20,7 +20,7 @@ startup_message off
 # Enable Auto detach
 autodetach on
 
-#
+# 終了時にバッファを消す
 altscreen on
 
 # Show date and screen list
