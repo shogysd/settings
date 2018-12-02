@@ -46,22 +46,23 @@ if [ $start = "y" ]; then
 
     echo ""
     echo "complete!!"
-    echo "conf file: ~/.gitconfig"
-    echo ""
-    
-    echo "Current user info..."
-    echo "user name: `cat ~/.gitconfig | grep "name = " | cut -b 2-`"
-    echo "user email: `cat ~/.gitconfig | grep "email = " | cut -b 2-`"
-    echo ""
-
-    echo "change or update"
-    echo "$ git config --global user.name '[username]'"
-    echo "$ git config --global user.email '[useremail]'"
 
 elif [ $start = "n" ]; then
-    echo "EXIT"
     echo ""
+    echo "PASS "
 else
-    echo "error"
     echo ""
+    echo "error"
 fi
+
+echo ""
+echo "conf file: ~/.gitconfig"
+echo ""
+echo "Current user info..."
+echo "user name: `cat ~/.gitconfig | grep "name = " | cut -b 2-`"
+echo "user email: `cat ~/.gitconfig | grep "email = " | cut -b 2-`"
+echo ""
+echo "change or update"
+echo "$ git config --global user.name '[username]'"
+echo "$ git config --global user.email '[useremail]'"
+echo ""
