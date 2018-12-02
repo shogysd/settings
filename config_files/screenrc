@@ -1,7 +1,12 @@
 # Time-stamp: <Sun Feb 18 00:21:34 JST 2018>
 
 # Encoding
+defutf8 on
 defencodig utf-8
+encoding utf8 utf8
+
+startup_message off
+vbell off
 
 # Prefix Key
 escape ^Jj
