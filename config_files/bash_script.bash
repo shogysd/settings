@@ -47,11 +47,20 @@ function clfmt(){
 
 function shis(){
     if [ $# = 1 ]; then
-        history | grep --color=auto $1
+        history | grep -E ".{29}.*${1}.*" | while read line
+        do
+            if [ $? = 0 ]; then
+                echo ${line} | awk '{printf "%5s  %10s  %8s     ", $1, $2, $3}'
+                echo ${line} | awk 'match($0, / *[^ ]* *[^ ]* *[^ ]* */) {print substr($0, RSTART+RLENGTH)}' | grep ${1}
+            fi
+        done
+        return 0
     elif [ $# = 0 ]; then
         echo "error: nothing arguments"
+        return 1
     else
         echo "error: many arguments"
+        return 1
     fi
 }
 
