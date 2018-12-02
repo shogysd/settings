@@ -51,7 +51,8 @@ function shis(){
         do
             if [ $? = 0 ]; then
                 echo ${line} | awk '{printf "%5s  %10s  %8s     ", $1, $2, $3}'
-                echo ${line} | awk 'match($0, / *[^ ]* *[^ ]* *[^ ]* */) {print substr($0, RSTART+RLENGTH)}' | grep ${1}
+                #echo ${line} | awk 'match($0, / *[^ ]* *[^ ]* *[^ ]* */) {print substr($0, RSTART+RLENGTH)}' | grep ${1}
+                echo ${line#* * * * } | grep ${1}
             fi
         done
         return 0
