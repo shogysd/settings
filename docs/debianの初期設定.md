@@ -45,7 +45,11 @@ dconf reset /org/gnome/desktop/input-sources/xkb-options
 ```
 ```
 cinnamon (UIから)
-設定（コントロールセンター） → ハードウェア → キーボード → レイアウト → オプション(O)... → Ctrlキーの位置
+設定（コントロールセンター） → ハードウェア → キーボード → レイアウト → オプション(O)
+
+ThinkPadの場合 (他の項目でも同じことができそうな内容があるが、うまく行かなかったりした)
+'A' の左をCtrlにする: "Caps Lock キーの動作" → "Caps Lock is also a Ctrl"
+'左Ctrl' と '左Alt' の入れ替え: "Ctrl キーの位置" → "Swap Left Alt key with Left Ctrl key"
 
 ```
 
@@ -106,7 +110,7 @@ $ sudo powertop
 の Tuneables が Good だといい感じになっている
 
 tlp はインストールすると起動時に自動でそのへんを設定してくれる
-
+```
 
 
 ## ターミナルの設定を更新
