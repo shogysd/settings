@@ -284,8 +284,8 @@ function -envWriter(){
 
 
 function -screenStarter(){
-    # Linuxのみ自動起動
-    if [ "${SSH_CONNECTION}" != "" ]; then
+    # シェルの深さが1でSSHされている場合に起動
+    if [ $SHLVL = 1 ] && [ "${SSH_CONNECTION}" != "" ]; then
         screen
     fi
 }
