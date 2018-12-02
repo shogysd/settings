@@ -372,7 +372,7 @@ function config-update(){
         echo ""
         
         echo "gitconfigscript.sh"
-        ${download_command} ~/gitconfigscript.sh ${url_common}gitconfigscript.sh
+        ${download_command} ~/gitconfigscript.sh ${url_common}git-config/gitconfigscript.sh
         echo ""
         chmod 744 ~/gitconfigscript.sh
         ~/gitconfigscript.sh
