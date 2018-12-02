@@ -28,5 +28,5 @@ autodetach on
 # 終了時にバッファを消す
 altscreen on
 
-# Show date and screen list
-hardstatus alwayslastline "%{= cd} %-w%{= wk} %n %t* %{-}%+w %= LoadAVG [%l] "
+# ステータスバー
+hardstatus alwayslastline "%{= wk} %-w%{= kw} %n %t* %{-}%+w %=[%c:%s] "
