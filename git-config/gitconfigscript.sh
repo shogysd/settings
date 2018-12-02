@@ -20,7 +20,7 @@ echo -n "start update ~/.gitconfig?: y-or-n: "
 read start
 if [ $start = "y" ]; then
 
-    echo -n "flush gitconfig?: y-or-n: "
+    echo -n "flush old gitconfig?: y-or-n: "
     read flushgitconfig
     if [ ${flushgitconfig} = "y" ]; then
         rm ~/.gitconfig > /dev/null 2>&1
