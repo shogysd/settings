@@ -47,14 +47,15 @@ function clfmt(){
 
 function shis(){
     if [ $# = 1 ]; then
-        history | grep -E " *[^ ]+ +[^ ]+ +[^ ]+ +.*${1}.*" | tail -n 100 | sed '$d' | while read line
-        do
-            if [ $? = 0 ]; then
-                echo ${line} | awk '{printf "%5s  %10s  %8s     ", $1, $2, $3}'
-                #echo ${line} | awk 'match($0, / *[^ ]* *[^ ]* *[^ ]* */) {print substr($0, RSTART+RLENGTH)}' | grep ${1}
-                echo ${line#* * * * } | grep ${1}
-            fi
-        done
+        history | \
+            sed '$d' | \
+            awk 'match($0, / *[^ ]+ +[^ ]+ +[^ ]+ +'${1}'.*/) { \
+                    split($0, tmp, " "); \
+                    printf "%5s  %10s  %8s     ", tmp[1], tmp[2], tmp[3]; \
+                    gsub("'${1}'", "'${esc_key}'[1;31m'${1}${esc_key}'[0;39m", $0); \
+                    match($0, / *[^ ]+ +[^ ]+ +[^ ]+ +/); \
+                    print substr($0, RSTART+RLENGTH) \
+                }'
         return 0
     elif [ $# = 0 ]; then
         echo "error: nothing arguments"
