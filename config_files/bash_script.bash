@@ -47,7 +47,7 @@ function clfmt(){
 
 function shis(){
     if [ $# = 1 ]; then
-        history | grep -E ".{29}.*${1}.*" | tail -n 100 | sed '$d' | while read line
+        history | grep -E " *[^ ]+ +[^ ]+ +[^ ]+ +.*${1}.*" | tail -n 100 | sed '$d' | while read line
         do
             if [ $? = 0 ]; then
                 echo ${line} | awk '{printf "%5s  %10s  %8s     ", $1, $2, $3}'
