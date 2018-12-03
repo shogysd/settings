@@ -286,7 +286,7 @@ function -envWriter(){
 
 function -screenStarter(){
     # シェルの深さが1でSSHされている場合に起動
-    if [ $SHLVL = 1 ] && [ "${SSH_CONNECTION}" != "" ]; then
+    if [ $SHLVL = 1 ] && [ "$TERM" != 'dumb' ] && [ "${SSH_CONNECTION}" != "" ]; then
         screen
     fi
 }
@@ -328,8 +328,10 @@ function -screenPrinter(){
 
 
 function -screenSessionPrinter(){
-    screen -ls | grep Attached | tr '.' ' ' | echo -e "${esc_key}[1;32m`awk '{printf "%s %s\t(Attached)\n", $1, $2}'`${esc_key}[0;39m"
-    screen -ls | grep Detached | tr '.' ' ' | awk '{printf "%s %s\t(Detached)\n", $1, $2}'
+    if [ $SHLVL = 1 ] && [ "$TERM" != 'dumb' ] && [ "${SSH_CONNECTION}" != "" ]; then
+        screen -ls | grep Attached | tr '.' ' ' | echo -e "${esc_key}[1;32m`awk '{printf "%s %s\t(Attached)\n", $1, $2}'`${esc_key}[0;39m"
+        screen -ls | grep Detached | tr '.' ' ' | awk '{printf "%s %s\t(Detached)\n", $1, $2}'
+    fi
 }
 
 
