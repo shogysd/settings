@@ -55,7 +55,9 @@ function shis(){
                     gsub("'${1}'", "\033[1;31m'${1}'\033[0;39m", $0); \
                     match($0, / {,5}[^ ]+ {2}[^ ]+ {1}[^ ]+ {3}/); \
                     print substr($0, RSTART+RLENGTH) \
-                }' #2>/dev/null
+                }' | \
+            tail -n 100
+            #2>/dev/null
         return 0
     elif [ $# = 0 ]; then
         echo "error: nothing arguments"
