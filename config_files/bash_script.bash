@@ -57,7 +57,7 @@ function shis(){
                     print substr($0, RSTART+RLENGTH) \
                 }' | \
             tail -n 100
-            #2>/dev/null
+            # 2>/dev/null
         return 0
     elif [ $# = 0 ]; then
         echo "error: nothing arguments"
