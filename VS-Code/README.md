@@ -19,7 +19,7 @@ code --install-extension garaemon.vscode-emacs-tab; \
 code --install-extension Compulim.vscode-clock; \
 code --install-extension rafaelmaiolla.remote-vscode; \
 code --install-extension jsynowiec.vscode-insertdatestring; \
-code --install-extension https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2;\
+code --install-extension CoenraadS.bracket-pair-colorizer-2;\
 code --install-extension ms-python.python; \
 code --install-extension ms-vscode.cpptools; \
 code --install-extension github.vscode-pull-request-github; \
