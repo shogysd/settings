@@ -72,4 +72,9 @@
     // ms-python.python
     "python.formatting.provider": "autopep8",
     "workbench.statusBar.feedback.visible": false,
+    // bracket-pair-colorizer-2
+    "bracket-pair-colorizer-2.forceIterationColorCycle": true,
+    "bracket-pair-colorizer-2.forceUniqueOpeningColor": false,
+    "bracket-pair-colorizer-2.colorMode": "Independent",
+    "bracket-pair-colorizer-2.showBracketsInGutter": true,
 }
