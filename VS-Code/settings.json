@@ -27,6 +27,14 @@
     "terminal.external.osxExec": "Terminal.app",
     // workbench
     "workbench.editor.enablePreview": false,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#111111",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.noFolderBackground": "#111111",
+        "statusBar.noFolderForeground": "#ffffff",
+        "statusBar.debuggingBackground": "#111111",
+        "statusBar.debuggingForeground": "#ffffff"
+    },
     // git
     "git.confirmSync": true,
     "git.enabled": true,
@@ -54,7 +62,7 @@
     },
     "files.autoSave": "afterDelay",
     // Compulim.vscode-clock
-    "clock.dateFormat": "mmm dd yyyy HH:MM:ss",
+    "clock.dateFormat": "\tmmm dd yyyy\tHH:MM:ss\t",
     // jsynowiec.vscode-insertdatestring
     "insertDateString.format": "'Time-stamp: <'YYYY-MM-DD hh:mm:ss ZZZ'>'",
     // rafaelmaiolla.remote-vscode;
@@ -63,4 +71,5 @@
     "C_Cpp.clang_format_fallbackStyle": "Google",
     // ms-python.python
     "python.formatting.provider": "autopep8",
+    "workbench.statusBar.feedback.visible": false,
 }
