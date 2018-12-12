@@ -29,5 +29,6 @@ code --install-extension christian-kohler.path-intellisense;\
 code --install-extension shardulm94.trailing-spaces;\
 code --install-extension formulahendry.auto-close-tag;\
 code --install-extension formulahendry.auto-rename-tag;\
-code --install-extension oderwat.indent-rainbow;
+# code --install-extension oderwat.indent-rainbow;\
+echo "finish"
 ```
