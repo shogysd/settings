@@ -78,8 +78,13 @@ function dirdiff(){
         more_detail=1
         arg1=${2}
         arg2=${3}
+    elif [ $# = 3 ] && [ -d ${1} ] && [ -d ${2} ] && [ "${3}" = "-m" ]; then
+        more_detail=1
+        arg1=${1}
+        arg2=${2}
     else
         echo "arg err"
+        return 1
     fi
 
     if [ "${more_detail}" = "1" ]; then
