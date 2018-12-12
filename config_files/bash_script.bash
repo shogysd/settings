@@ -1,5 +1,3 @@
-# Time-stamp: <Mon Sep 17 13:21:50 JST 2018>
-
 os=`uname 2>&1`
 
 if [ ${os} = "Darwin" ]; then
