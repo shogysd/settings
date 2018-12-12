@@ -29,10 +29,14 @@ if [ $start = "y" ]; then
     git config --global core.excludesfile ~/.gitignore_global
     git config --global core.editor emacs
     git config --global core.pager less
+
     git config --global color.ui true
     git config --global core.autocrlf input
+
     git config --global push.default nothing
     # git config --global push.default simple
+
+    git config --global fetch.prune 'true'
 
     git config --global alias.co 'checkout'
     git config --global alias.st 'status'
