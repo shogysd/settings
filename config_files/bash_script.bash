@@ -67,6 +67,68 @@ function shis(){
 }
 
 
+function dirdiff(){
+    echo ""
+    more_detail=0
+
+    if [ $# = 2 ] && [ -d ${1} ] && [ -d ${2} ]; then
+        arg1=${1}
+        arg2=${2}
+    elif [ $# = 3 ] && [ "${1}" = "-m" ] && [ -d ${2} ] && [ -d ${3} ]; then
+        more_detail=1
+        arg1=${2}
+        arg2=${3}
+    else
+        echo "arg err"
+    fi
+
+    if [ "${more_detail}" = "1" ]; then
+        echo ""
+        echo "${arg1} only"
+        for a_file_name in `find ./${arg1} | grep -vx "./${arg1}" | grep -v "\/\."`
+        do
+            b_file_name=`echo ${a_file_name} | sed -e "s/${arg1}/${arg2}/g"`
+
+            if [ ! -f ${b_file_name} ]; then
+                echo "   ${a_file_name}"
+            fi
+        done
+
+        echo ""
+        echo "${arg2} only"
+        for b_file_name in `find ./${arg2} | grep -vx "./${arg2}" | grep -v "\/\."`
+        do
+            a_file_name=`echo ${b_file_name} | sed -e "s/${arg2}/${arg1}/g"`
+
+            if [ ! -f ${a_file_name} ]; then
+                echo "   ${b_file_name}"
+            fi
+        done
+    fi
+
+    if [ "${more_detail}" = "1" ]; then
+        echo ""
+        echo "differences"
+    fi
+    for a_file_name in `find ./${arg1} | grep -vx "./${arg1}" | grep -v "\/\."`
+    do
+        b_file_name=`echo ${a_file_name} | sed -e "s/${arg1}/${arg2}/g"`
+        if [ -f ${b_file_name} ]; then
+            diff ${a_file_name} ${b_file_name} > /dev/null
+            if [ $? = 1 ]; then
+                if [ "${more_detail}" = "1" ]; then
+                    echo -ne "   "
+                fi
+                echo -ne "./[ ${arg1} | ${arg2} ]"
+                echo ${a_file_name} | sed -e "s/\.\/${arg1}//g"
+            fi
+        fi
+    done
+    echo ""
+    return 0
+}
+
+
 function gitignore-sw(){
     if [ $# != 1 ]; then
         echo "error: arguments err"
