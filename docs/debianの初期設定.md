@@ -53,7 +53,7 @@ ThinkPadの場合 (他の項目でも同じことができそうな内容があ�
 
 ```
 
-### 日本語入力を有効にする
+### 日本語入力を有効にしたり、変換候補の表示場所をいい感じにする
 ```
 $ sudo apt-get install ibus-mozc
 $ sudo apt-get install ibus-gtk ibus-gtk3 ibus-qt4
