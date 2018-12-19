@@ -2,13 +2,13 @@ os=`uname 2>&1`
 
 if [ ${os} = "Darwin" ]; then
     # macOS
-    emacs_PATH='/Applications/Emacs.app/Contents/MacOS/Emacs'
+    emacs_PATH='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
     esc_key='\033'
     download_command='curl -o'
     git_command_path='/usr/bin/git'
 else
     # Linux ${os} = "Linux"
-    emacs_PATH='emacs'
+    emacs_PATH='emacs -nw'
     esc_key='\e'
     download_command='wget -O'
     git_command_path='/usr/bin/git'
