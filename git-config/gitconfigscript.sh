@@ -27,7 +27,7 @@ if [ $start = "y" ]; then
     fi
     
     git config --global core.excludesfile ~/.gitignore_global
-    git config --global core.editor emacs
+    git config --global core.editor 'emacs -nw'
     git config --global core.pager less
 
     git config --global color.ui true
