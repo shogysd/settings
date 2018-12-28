@@ -281,6 +281,13 @@ function gd(){
 }
 
 
+function -synchronized_history {
+    history -a
+    history -c
+    history -r
+}
+
+
 function -pathWriter(){
     if ${git_command_path} rev-parse --is-inside-work-tree > /dev/null 2>&1; then
         if [ -z "$(git status --porcelain)" ]; then
