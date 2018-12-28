@@ -8,7 +8,7 @@ export HISTIGNORE='ls':'pwd':'clear'
 PROMPT_COMMAND='-synchronized_history'
 
 # 履歴のサイズを変更
-export HISTSIZE=30000
+export HISTSIZE=9999
 
 # 履歴のフォーマットを設定 (c言語のstrftimeと同じものが使える)
 export HISTTIMEFORMAT='%m/%d/%y (%H:%M:%S)   '
