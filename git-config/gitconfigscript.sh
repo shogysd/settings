@@ -33,8 +33,8 @@ if [ $start = "y" ]; then
     git config --global color.ui true
     git config --global core.autocrlf input
 
-    git config --global push.default nothing
-    # git config --global push.default simple
+    # git config --global push.default nothing
+    git config --global push.default simple
 
     git config --global fetch.prune 'true'
 
