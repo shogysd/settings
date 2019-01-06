@@ -2,12 +2,13 @@ os=`uname 2>&1`
 if [ ${os} = "Darwin" ]; then
     # macOS
     alias ls='ls -G'
-    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
-    alias sema='sudo /Applications/Emacs.app/Contents/MacOS/Emacs'
+    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+    alias sema='sudo /Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 else
     # Linux ${os} = "Linux"
     alias ls='ls --color=auto'
     alias sema='sudo emacs'
+    alias emacs='emacs -nw'
 fi
 
 if [ -f ~/.rmate ]; then
