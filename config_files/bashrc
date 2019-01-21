@@ -22,6 +22,6 @@ fi
 shopt -u histappend
 
 PS1="\n\u@\h  ( \$(-pathWriter) )\$(-gitChecker)\
-\n[ \$(-screenPrinter) ]\$(-envWriter) \$"
+\n[ \$(-screenPrinter) ]\$(-envWriter)\$ "
 
 -screenSessionPrinter
