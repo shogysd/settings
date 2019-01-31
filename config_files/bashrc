@@ -25,5 +25,6 @@ PS1="\n\u@\h  ( \$(-pathWriter) )\$(-gitChecker)\
 \n[ \$(-screenPrinter) ]\$(-envWriter)\$ "
 
 if [ `screen -ls | wc -l | xargs echo` -ge 4 ]; then
-　　　　　　　　-screenSessionPrinter
+    screen -ls | grep Attached | tr '.' ' ' | echo -e "${esc_key}[1;32m`awk '{printf "%s %s\t(Attached)\n", $1, $2}'`${esc_key}[0;39m"
+    screen -ls | grep Detached | tr '.' ' ' | awk '{printf "%s %s\t(Detached)\n", $1, $2}'
 fi
