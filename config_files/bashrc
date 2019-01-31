@@ -24,6 +24,6 @@ shopt -u histappend
 PS1="\n\u@\h  ( \$(-pathWriter) )\$(-gitChecker)\
 \n[ \$(-screenPrinter) ]\$(-envWriter)\$ "
 
-if [ $SHLVL = 1 ] && [ -f ~/.screenrc ]; then
+if [ `screen -ls | wc -l | xargs echo` -ge 4 ]; then
 　　　　　　　　-screenSessionPrinter
 fi
