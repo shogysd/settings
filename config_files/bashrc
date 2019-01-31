@@ -16,6 +16,7 @@ fi
 
 if [ $SHLVL = 1 ] && [ -f ~/.screenrc ]; then
     -screenStarter
+　　　　　　　　-screenSessionPrinter
 fi
 
 # bashの追記は不要 (PROMPT_COMMAND='share_history' による)
@@ -23,5 +24,3 @@ shopt -u histappend
 
 PS1="\n\u@\h  ( \$(-pathWriter) )\$(-gitChecker)\
 \n[ \$(-screenPrinter) ]\$(-envWriter)\$ "
-
--screenSessionPrinter
