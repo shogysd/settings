@@ -5,7 +5,7 @@ export HISTCONTROL=ignoreboth
 export HISTIGNORE='ls':'pwd':'clear'
 
 # プロンプトの表示前に履歴の同期
-PROMPT_COMMAND='-synchronized_history'
+PROMPT_COMMAND='-prompt_commands'
 
 # 履歴のサイズを変更
 export HISTSIZE=9999
