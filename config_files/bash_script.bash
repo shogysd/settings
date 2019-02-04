@@ -281,10 +281,8 @@ function gd(){
 }
 
 
-function -synchronized_history {
+function -prompt_commands {
     history -a
-    history -c
-    history -r
 }
 
 
