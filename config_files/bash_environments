@@ -5,7 +5,7 @@ export HISTCONTROL=ignoreboth
 export HISTIGNORE='ls':'pwd':'clear'
 
 # プロンプトの表示前に実行するコマンド
-PROMPT_COMMAND='-prompt_commands'
+PROMPT_COMMAND='history -a'
 
 # 履歴のサイズを変更
 export HISTSIZE=9999
