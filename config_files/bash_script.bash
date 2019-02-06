@@ -281,6 +281,29 @@ function gd(){
 }
 
 
+# ------------------------------ #
+
+function -l1Printer(){
+    l1="$(-basicInfoPrinter)  ( $(-pathWriter) )"
+    l1git="$(-gitChecker)"
+    l1len=$(echo "${l1}${l1git}" | tr -d "[:cntrl:]" | sed -e "s/\[[0-9]\{1,2\};[0-9]\{1,2\};\{0,1\}[0-9]\{1,2\}m//g" | wc -c | tr -d ' ')
+
+    if [ ${l1len} -lt $(tput cols) ]; then
+        echo "${l1}${l1git}"
+    else
+        echo "${l1}"
+        echo "${l1git}"
+    fi
+}
+
+
+function -basicInfoPrinter(){
+    hn=$(hostname)
+    hn=${hn%.*}
+    echo -n "$(whoami)@${hn}"
+}
+
+
 function -pathWriter(){
     if ${git_command_path} rev-parse --is-inside-work-tree > /dev/null 2>&1; then
         if [ -z "$(git status --porcelain)" ]; then
@@ -302,9 +325,9 @@ function -pathWriter(){
                 echo -ne "${esc_key}[1;31;7mgit:${esc_key}[0;39m "
             fi
         fi
-
-        echo -n "`${git_command_path} rev-parse --show-toplevel | awk -F'/' '{printf $NF}'`/"
-        ${git_command_path} rev-parse --show-prefix
+        repo=`${git_command_path} rev-parse --show-toplevel | awk -F'/' '{printf $NF}'`
+        gpath=`${git_command_path} rev-parse --show-prefix`
+        echo "${repo}/${gpath}"
     else
         pwd
     fi
@@ -407,13 +430,13 @@ function config-update(){
     if [ $start = "y" ]; then
 
         update_files=("bash_profile"\
-        "bashrc"\
-        "bash_environments"\
-        "bash_aliases"\
-        "bash_script.bash"\
-        "screenrc"\
-        "emacs"\
-        "gitignore_global")
+                          "bashrc"\
+                          "bash_environments"\
+                          "bash_aliases"\
+                          "bash_script.bash"\
+                          "screenrc"\
+                          "emacs"\
+                          "gitignore_global")
 
         update_files_len=`expr ${#update_files[@]} - 1`
 
