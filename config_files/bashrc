@@ -21,7 +21,7 @@ fi
 # bashの追記は不要 (PROMPT_COMMAND='share_history' による)
 shopt -u histappend
 
-PS1="\n\u@\h  ( \$(-pathWriter) )\$(-gitChecker)\
+PS1="\n\$(-l1Printer)\
 \n[ \$(-screenPrinter) ]\$(-envWriter)\$ "
 
 if [ $SHLVL = 1 ] && [ "$TERM" != 'dumb' ] && [ "${SSH_CONNECTION}" != "" ]; then
