@@ -112,6 +112,13 @@ $ sudo powertop
 tlp はインストールすると起動時に自動でそのへんを設定してくれる
 ```
 
+## FUSEの設定
+```
+$ sudo apt-get install fuse
+$ sudo modprobe fuse
+$ sudo groupadd fuse
+$ sudo usermod -a -G fuse `whoami`
+```
 
 ## ターミナルの設定を更新
 ```
