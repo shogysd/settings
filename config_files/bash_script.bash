@@ -292,7 +292,7 @@ function -l1Printer(){
         echo "${l1}${l1git}"
     else
         echo "${l1}"
-        echo "${l1git}"
+        echo "$(-basicInfoPrinter | sed -e 's/./ /g') ${l1git}"
     fi
 }
 
