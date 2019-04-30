@@ -273,7 +273,7 @@ function screen-clean(){
 
 function gd(){
     topLevelPath=`${git_command_path} rev-parse --show-toplevel 2> /dev/null`
-    if  [ $? = 0 ]; then
+    if [ $? = 0 ]; then
         cd ${topLevelPath}
     else
         echo "error: out of git"
