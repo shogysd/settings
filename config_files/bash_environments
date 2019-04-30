@@ -26,6 +26,7 @@ export EDITOR=emacs
 # GOPATH
 export GOPATH=$HOME/gopath_global
 
+os=`uname 2>&1`
 if [ ${os} = "Darwin" ]; then
     # macOS
     export PATH=$PATH":/Library/Frameworks/Python.framework/Versions/$(ls /Library/Frameworks/Python.framework/Versions/ | sort -nr | head -n 1)/bin"
