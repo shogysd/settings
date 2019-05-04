@@ -1,0 +1,5 @@
+# pipの設定
+
+```
+$ sudo apt-get install python3-pip
+```設定
