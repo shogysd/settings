@@ -66,13 +66,12 @@ $ sudo apt-get install ibus-gtk ibus-gtk3 ibus-qt4
 Mozcプロパティー → 一般 → キー設定 → 編集 → "直接入力" にIMEを有効化の設定を、"入力文字なし" にIMEを無効化の設定を入れる
 iBusの設定から、インプットメソッドの切り替えを幼さそうなやつにする
 
-キーマップは [ここ](https://github.com/shogysd/settings/blob/master/config_files/linux_mozc_keymap.txt) からダウンロードしてMozcにインポートでOK
-
 再起動
 
 # iBus設定を開くとしたら
 # $ ibus-setup
 ```
+キーマップは [ここ](https://github.com/shogysd/settings/blob/master/config_files/linux_mozc_keymap.txt) からダウンロードしてMozcにインポートでOK
 
 ### 鍵の設定
 ```
