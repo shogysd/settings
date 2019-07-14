@@ -1,4 +1,4 @@
-# Debianの初期設定
+# Linux (deb) の初期設定
 
 ## rootユーザーでの作業
 ( suしておく )
@@ -59,18 +59,12 @@ $ sudo apt-get install ibus-mozc
 $ sudo apt-get install ibus-gtk ibus-gtk3 ibus-qt4
 ```
 
-##### cinnamon
-```
-インプットメソッドの表示部分を右クリック → 設定 → 一般 → キーボードショートカット → 次の入力メソッド → 押さそうなやつにする
-インプットメソッドの表示部分を右クリック → 設定 → 入力メソッド → 日本語(Mozc)のみにする
-インプットメソッドの表示部分を右クリック → 設定 → 入力メソッド → 日本語(Mozc) を選択 → 設定 → 一般 → キー設定 → 編集 → 各モードのIME有効化・無効化を好きなキーバインドに変更
-```
-
 ##### GNOME3
 ```
 設定 → Region&Language → 入力ソース → 日本語(Mozc)のみにする
 設定 → Keyboard → タイピング → インプットメソッドの切り替えキーを設定 → 押さそうなやつにする
-Mozcプロパティー → 一般 → キー設定 → 編集 → 各モードのIME有効化・無効化を好きなキーバインドに変更
+Mozcプロパティー → 一般 → キー設定 → 編集 → "直接入力" にIMEを有効化の設定を、"入力文字なし" にIMEを無効化の設定を入れる
+iBusの設定から、インプットメソッドの切り替えを幼さそうなやつにする
 
 再起動
 
@@ -140,4 +134,6 @@ sudo apt-get -y install curl; \
 sudo apt-get -y install linux-headers-amd64; \
 sudo apt-get -y install chromium; \
 sudo apt-get -y install screen; \
+sudo apt-get -y install mozc-utils-gui; \
+sudo apt-get -y install fcitx-config-gtk
 ```
