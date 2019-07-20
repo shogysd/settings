@@ -23,9 +23,13 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 # 標準のエディターをemacsに
 export EDITOR=emacs
 
+# google cloud sdk
+export PATH=$PATH":$HOME/google-cloud-sdk/bin"
+
 # GOPATH
 export GOPATH=$HOME/gopath_global
 
+# Python
 os=`uname 2>&1`
 if [ ${os} = "Darwin" ]; then
     # macOS
