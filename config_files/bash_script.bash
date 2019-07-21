@@ -298,13 +298,6 @@ tr -d ' ')
 }
 
 
-function -gitChecker(){
-    if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-        echo -e " < $(-gitBranchPrinter) | $(-gitHashPrinter) >"
-    fi
-}
-
-
 function -gitBranchPrinter(){
     gitBranch=$(git symbolic-ref --short HEAD 2> /dev/null)
     if [ $? = 0 ]; then
@@ -325,6 +318,13 @@ function -gitHashPrinter(){
         echo -n "${gitHash}"
     else
         echo -n "Not committed"
+    fi
+}
+
+
+function -gitChecker(){
+    if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+        echo -e " < $(-gitBranchPrinter) | $(-gitHashPrinter) >"
     fi
 }
 
