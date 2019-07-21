@@ -284,9 +284,10 @@ function gd(){
 # ------------------------------ #
 
 function -l1Printer(){
-    l1="$(-basicInfoPrinter)  ( $(-pathWriter) )"
+    l1="${BASICINFO}  ( $(-pathWriter) )"
     l1git="$(-gitChecker)"
-    l1len=$(echo "${l1}${l1git}" | tr -d "[:cntrl:]" | sed -e "s/\[[0-9]\{1,2\};[0-9]\{1,2\};\{0,1\}[0-9]\{1,2\}m//g" | wc -c | tr -d ' ')
+    l1len=$(echo "${l1}${l1git}" | tr -d "[:cntrl:]" | sed -e "s/\[[0-9]\{1,2\};[0-9]\{1,2\};\{0,1\}[0-9]\{1,2\}m//g" | wc -c | \
+tr -d ' ')
 
     if [ ${l1len} -lt $(tput cols) ]; then
         echo "${l1}${l1git}"
@@ -294,13 +295,6 @@ function -l1Printer(){
         echo "${l1}"
         echo "$(-basicInfoPrinter | sed -e 's/./ /g') ${l1git}"
     fi
-}
-
-
-function -basicInfoPrinter(){
-    hn=$(hostname)
-    hn=${hn%.*}
-    echo -n "$(whoami)@${hn}"
 }
 
 
