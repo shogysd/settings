@@ -1,3 +1,8 @@
+# shell conf
+export HOSTSTRIPSTR=".local"
+export BASICINFO="$(whoami)@$(hostname | sed -e 's/\.local//g')"
+
+
 # 連続をしたコマンドを1度のみの記録に + スペースから始まるコマンドを無視
 export HISTCONTROL=ignoreboth
 
@@ -33,7 +38,8 @@ export GOPATH=$HOME/gopath_global
 os=`uname 2>&1`
 if [ ${os} = "Darwin" ]; then
     # macOS
-    export PATH=$PATH":/Library/Frameworks/Python.framework/Versions/$(ls /Library/Frameworks/Python.framework/Versions/ | sort -nr | head -n 1)/bin"
+    export PATH=$PATH":/Library/Frameworks/Python.framework/Versions/$(ls /Library/Frameworks/Python.framework/Versions/ | sort \
+-nr | head -n 1)/bin"
 # else
     # Linux ${os} = "Linux"
 fi
