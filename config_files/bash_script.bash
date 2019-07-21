@@ -298,6 +298,37 @@ tr -d ' ')
 }
 
 
+function -gitChecker(){
+    if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+        echo -e " < $(-gitBranchPrinter) | $(-gitHashPrinter) >"
+    fi
+}
+
+
+function -gitBranchPrinter(){
+    gitBranch=$(git symbolic-ref --short HEAD 2> /dev/null)
+    if [ $? = 0 ]; then
+        if [ ${gitBranch} = "master" ]; then
+            echo -n "${esc_key}[0;33mmaster${esc_key}[0;39m"
+        else
+            echo -n "${gitBranch}"
+        fi
+    else
+        echo -n "${esc_key}[0;36mdetached${esc_key}[0;39m"
+    fi
+}
+
+
+function -gitHashPrinter(){
+    gitHash=$(git rev-parse HEAD 2> /dev/null | awk '{print substr($0, 0, 7)}')
+    if [ $? = 0 ]; then
+        echo -n "${gitHash}"
+    else
+        echo -n "Not committed"
+    fi
+}
+
+
 function -pathWriter(){
     if ${git_command_path} rev-parse --is-inside-work-tree > /dev/null 2>&1; then
         if [ -z "$(git status --porcelain)" ]; then
@@ -327,36 +358,6 @@ function -pathWriter(){
     fi
 }
 
-
-function -gitBranchPrinter(){
-    gitBranch=`${git_command_path} symbolic-ref --short HEAD 2> /dev/null`
-    if [ $? = 0 ]; then
-        if [ ${gitBranch} = "master" ]; then
-            echo -n "${esc_key}[0;33mmaster${esc_key}[0;39m"
-        else
-            echo -n "${gitBranch}"
-        fi
-    else
-        echo -n "${esc_key}[0;36mdetached${esc_key}[0;39m"
-    fi
-}
-
-
-function -gitHashPrinter(){
-    gitHash=`${git_command_path} rev-parse HEAD 2> /dev/null | awk '{print substr($0, 0, 7)}'`
-    if [ $? = 0 ]; then
-        echo -n "${gitHash}"
-    else
-        echo -n "Not committed"
-    fi
-}
-
-
-function -gitChecker(){
-    if ${git_command_path} rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-        echo -e " < `-gitBranchPrinter` | `-gitHashPrinter` >"
-    fi
-}
 
 function -envWriter(){
     envpath=`echo -n $VIRTUAL_ENV | awk -F'/' '{printf $NF}'`
