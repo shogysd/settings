@@ -240,22 +240,6 @@ function ema(){
 }
 
 
-function flush(){
-    ls -A *~ &> /dev/null
-    if [ $? = 0 ]; then
-        \rm *~
-    fi
-    ls -A .*~ &> /dev/null
-    if [ $? = 0 ]; then
-        \rm .*~
-    fi
-    ls -A \#*\# &> /dev/null
-    if [ $? = 0 ]; then
-        \rm \#*\#
-    fi
-}
-
-
 function screen-clean(){
     echo -n "cleanup detached screen?: y-or-n: "
     read start
@@ -267,16 +251,6 @@ function screen-clean(){
         echo "EXIT"
     else
         echo "error"
-    fi
-}
-
-
-function gd(){
-    topLevelPath=`${git_command_path} rev-parse --show-toplevel 2> /dev/null`
-    if [ $? = 0 ]; then
-        cd ${topLevelPath}
-    else
-        echo "error: out of git"
     fi
 }
 
