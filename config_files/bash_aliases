@@ -21,6 +21,7 @@ alias rm='rm -i'
 alias dir='dir --color=auto'
 alias ll='ls -l'
 alias la='ls -A'
+alias flush='rm -f *~ .*~ \#*\#'
 
 # python
 alias py='python3'
