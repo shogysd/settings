@@ -15,13 +15,17 @@ if [ -f ~/.rmate ]; then
     alias code='~/.rmate'
 fi
 
-alias py='python3'
+# command
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias dir='dir --color=auto'
 alias ll='ls -l'
 alias la='ls -A'
+
+# python
 alias py='python3'
+
+# c/cpp
 alias clpp='clang++ -std=c++14'
 alias clpp11='clang++ -std=c++11'
 alias clpp14='clang++ -std=c++14'
