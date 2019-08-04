@@ -180,16 +180,6 @@ function -screenPrinter(){
             screen -ls | grep "Attached" | grep `expr ${PPID} - ${argument_for_adjustment}` | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'
             return 0
         else
-            # for counter in `seq 1 3`;
-            # do
-            #     predicted_id=`expr ${PPID} - ${argument_for_adjustment} - ${counter}`
-            #     screen -ls | grep "Attached" | grep ${predicted_id} > /dev/null
-            #     if [ $? = 0 ]; then
-            #         screen -ls | grep ${pretected_id} | tr '.' ' ' | awk '{printf "%s %s", $1, $2}'
-            #         echo -n " (estimated)"
-            #         return 0
-            #     fi
-            # done
             echo -ne "PPID: ${PPID}"
             return 1
         fi
