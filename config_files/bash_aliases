@@ -23,6 +23,7 @@ alias rm='rm -i'
 alias dir='dir --color=auto'
 alias ll='ls -l'
 alias la='ls -A'
+alias hn='hostname'
 alias flush='rm -f *~ .*~ \#*\#'
 
 # git
