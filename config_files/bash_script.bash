@@ -32,17 +32,6 @@ function strcmp(){
 }
 
 
-function clfmt(){
-    find . -name "*.h" | xargs clang-format -i -style=Google
-    find . -name "*.c" | xargs clang-format -i -style=Google
-    find . -name "*.hpp" | xargs clang-format -i -style=Google
-    find . -name "*.cpp" | xargs clang-format -i -style=Google
-    find . -name "*.cc" | xargs clang-format -i -style=Google
-    find . -name "*.cp" | xargs clang-format -i -style=Google
-    find . -name "*.cxx" | xargs clang-format -i -style=Google
-}
-
-
 function shis(){
     if [ $# = 1 ]; then
         history | \
@@ -204,42 +193,6 @@ function hosts-sw(){
 }
 
 
-function ema(){
-    if [ $# = 0 ]; then
-        ${emacs_PATH}
-    elif [ $# = 1 ]; then
-        if [ "$1" = "-nw" ] || [ "$1" = "nw" ] ; then
-            ${emacs_PATH} -nw
-        elif [ -d $1 ]; then
-            echo "error: $1 is directory"
-        elif [ -f $1 ]; then
-            ${emacs_PATH} $1
-        else
-            ls $1 2>&1 | awk '{print substr($0, 5)}'
-        fi
-    elif [ $# = 2 ]; then
-        fname="."
-        if [ "$1" = "-nw" ] || [ "$1" = "nw" ] ; then
-            fname="$2"
-        elif [ "$2" = "-nw" ] || [ "$2" = "nw" ]; then
-            fname="$1"
-        else
-            echo "error: arguments err"
-            return -1
-        fi
-        if [ -d ${fname} ]; then
-            echo "error: ${fname} is directory"
-        elif [ -f ${fname} ]; then
-            ${emacs_PATH} -nw ${fname}
-        else
-            ls ${fname} 2>&1 | awk '{print substr($0, 5)}'
-        fi
-    else
-        echo "error: many arguments"
-    fi
-}
-
-
 function screen-clean(){
     echo -n "cleanup detached screen?: y-or-n: "
     read start
@@ -336,9 +289,7 @@ function -pathWriter(){
 function -envWriter(){
     envpath=`echo -n $VIRTUAL_ENV | awk -F'/' '{printf $NF}'`
     if [ -n "${envpath}" ]; then
-        echo -n " < venv: "
-        echo -n ${envpath}
-        echo -n " >"
+        echo -n "[ venv: "${envpath}" ] "
     fi
 }
 
