@@ -22,7 +22,7 @@ fi
 shopt -u histappend
 
 PS1="\n\$(-l1Printer)\
-\n[ \$(-screenPrinter) ]\$(-envWriter)\$ "
+\n\$(-envWriter)\$ "
 
 if [ "$TERM" != 'dumb' ] && [ "${SSH_CONNECTION}" != "" ]; then
     screen -ls | grep Attached | tr '.' ' ' | echo -e "${esc_key}[1;32m`awk '{printf "%s %s\t(Attached)\n", $1, $2}'`${esc_key}[0;39m"
