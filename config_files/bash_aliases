@@ -31,6 +31,7 @@ alias gd='cd $(git rev-parse --show-toplevel)'
 
 # python
 alias py='python3'
+alias activate='source ./bin/activate'
 
 # c/cpp
 alias clpp='clang++ -std=c++14'
