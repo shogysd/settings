@@ -44,13 +44,11 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:nocaps']"
 dconf reset /org/gnome/desktop/input-sources/xkb-options
 ```
 ```
-cinnamon (UIから)
-設定（コントロールセンター） → ハードウェア → キーボード → レイアウト → オプション(O)
-
-ThinkPadの場合 (他の項目でも同じことができそうな内容があるが、うまく行かなかったりした)
-'A' の左をCtrlにする: "Caps Lock キーの動作" → "Caps Lock is also a Ctrl"
-'左Ctrl' と '左Alt' の入れ替え: "Ctrl キーの位置" → "Swap Left Alt key with Left Ctrl key"
-
+ThinkPadの場合 (tweakのUIから設定)
+- Ctrl position
+  - 'A'の左側
+  - CapsLock を Ctrl として扱う
+  - LeftAlt as Ctrl, LeftCtrl as Win, LeftWin as LeftAlt
 ```
 
 ### 日本語入力を有効にしたり、変換候補の表示場所をいい感じにする
