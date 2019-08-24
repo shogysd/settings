@@ -44,5 +44,6 @@ if [ ${os} = "Darwin" ]; then
     export PATH=$PATH":/Library/Frameworks/Python.framework/Versions/$(ls /Library/Frameworks/Python.framework/Versions/ | sort \
 -nr | head -n 1)/bin"
 # else
-    # Linux ${os} = "Linux"
+    # Linux
+    export PATH=$PATH":~/.local/bin"
 fi
