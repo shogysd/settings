@@ -45,5 +45,5 @@ if [ ${os} = "Darwin" ]; then
 -nr | head -n 1)/bin"
 # else
     # Linux
-    export PATH=$PATH":~/.local/bin"
+    export PATH=$PATH":${HOME}/.local/bin"
 fi
