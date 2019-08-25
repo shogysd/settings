@@ -51,7 +51,6 @@ function addpath(){
             fi
         done
         export PATH=$PATH":$1"
-        echo "$1 is added"
         return 0
     fi
 }
