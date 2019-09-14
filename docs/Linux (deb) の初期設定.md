@@ -44,11 +44,18 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:nocaps']"
 dconf reset /org/gnome/desktop/input-sources/xkb-options
 ```
 ```
-ThinkPadの場合 (tweakのUIから設定)
+ThinkPadの場合 / 内蔵キーボード (tweakのUIから設定)
 - Ctrl position
   - 'A'の左側
   - CapsLock を Ctrl として扱う
   - LeftAlt as Ctrl, LeftCtrl as Win, LeftWin as LeftAlt
+```
+```
+ThinkPadの場合 / HHKB Mac-Mode (tweakのUIから設定)
+- Ctrl position
+  - CapsLock を Ctrl として使う
+- Alt/Winキーの動作
+  - Ctrl is mapped to Win and the usual CtrlKeys
 ```
 
 ### 日本語入力を有効にしたり、変換候補の表示場所をいい感じにする
