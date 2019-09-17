@@ -1,5 +1,100 @@
-// 既定値を上書きするには、このファイル内にキー バインドを挿入します
 [
+    {
+        "key": "ctrl+n",
+        "command": "cursorDown"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "cursorUp"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "cursorRight"
+    },
+    {
+        "key": "PageDown",
+        "command": "cursorRight"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "cursorLeft"
+    },
+    {
+        "key": "PageUp",
+        "command": "cursorLeft"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "cursorHome"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "cursorEnd"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "deleteRight"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "deleteLeft"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "deleteAllRight"
+    },
+    {
+        "key": "alt+shift+,",
+        "command": "cursorTop"
+    },
+    {
+        "key": "alt+shift+.",
+        "command": "cursorBottom"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "deleteWordLeft"
+    },
+    {
+        "key": "ctrl+shift+a",
+        "command": "selectAll"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "actions.find"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "editor.action.startFindReplaceAction"
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "editor.action.startFindReplaceAction"
+    },
+    {
+        "key": "alt+f",
+        "command": "cursorRightSelect"
+    },
+    {
+        "key": "alt+b",
+        "command": "cursorLeftSelect"
+    },
+    {
+        "key": "alt+n",
+        "command": "cursorDownSelect"
+    },
+    {
+        "key": "alt+p",
+        "command": "cursorUpSelect"
+    },
+    {
+        "key": "alt+a",
+        "command": "cursorHomeSelect"
+    },
+    {
+        "key": "alt+e",
+        "command": "cursorEndSelect"
+    },
     {
         "key": "tab",
         "command": "emacs-tab.reindentCurrentLine",
