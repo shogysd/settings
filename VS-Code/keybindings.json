@@ -122,7 +122,7 @@
         "key": "alt+shift+a",
         "command": "selectAll"
     },
-    // 検索
+    // 検索, 置換
     {
         "key": "ctrl+shift+s",
         "command": "actions.find"
