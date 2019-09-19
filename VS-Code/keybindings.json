@@ -118,6 +118,10 @@
         "key": "ctrl+shift+a",
         "command": "selectAll"
     },
+    {
+        "key": "alt+shift+a",
+        "command": "selectAll"
+    },
     // 検索
     {
         "key": "ctrl+shift+s",
