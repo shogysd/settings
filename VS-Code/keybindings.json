@@ -1,11 +1,12 @@
 [
-    {
-        "key": "ctrl+n",
-        "command": "cursorDown"
-    },
+    // カーソルの移動
     {
         "key": "ctrl+p",
         "command": "cursorUp"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "cursorDown"
     },
     {
         "key": "ctrl+f",
@@ -23,6 +24,16 @@
         "key": "PageUp",
         "command": "cursorLeft"
     },
+    // カーソルの移動 (単語単位)
+    {
+        "key": "ctrl+tab",
+        "command": "cursorWordEndRight"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "cursorWordEndLeft"
+    },
+    // カーソルの移動 (行単位)
     {
         "key": "ctrl+a",
         "command": "cursorHome"
@@ -31,18 +42,7 @@
         "key": "ctrl+e",
         "command": "cursorEnd"
     },
-    {
-        "key": "ctrl+d",
-        "command": "deleteRight"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "deleteLeft"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "deleteAllRight"
-    },
+    // カーソルの移動 (ファイル単位)
     {
         "key": "alt+shift+,",
         "command": "cursorTop"
@@ -51,14 +51,74 @@
         "key": "alt+shift+.",
         "command": "cursorBottom"
     },
+    // 文字の削除
+    {
+        "key": "ctrl+d",
+        "command": "deleteRight"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "deleteLeft"
+    },
+    // 文字の削除 (単語単位)
     {
         "key": "ctrl+w",
         "command": "deleteWordLeft"
     },
     {
+        "key": "ctrl+shift+w",
+        "command": "deleteWordRight"
+    },
+    // 文字の削除 (行単位)
+    {
+        "key": "ctrl+k",
+        "command": "deleteAllRight"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "deleteAllLeft"
+    },
+    // 選択
+    {
+        "key": "alt+p",
+        "command": "cursorUpSelect"
+    },
+    {
+        "key": "alt+n",
+        "command": "cursorDownSelect"
+    },
+    {
+        "key": "alt+f",
+        "command": "cursorRightSelect"
+    },
+    {
+        "key": "alt+b",
+        "command": "cursorLeftSelect"
+    },
+    // 選択 (行単位)
+    {
+        "key": "alt+a",
+        "command": "cursorHomeSelect"
+    },
+    {
+        "key": "alt+e",
+        "command": "cursorEndSelect"
+    },
+    // 選択 (単語単位)
+    {
+        "key": "alt+tab",
+        "command": "cursorWordEndRightSelect"
+    },
+    {
+        "key": "alt+shift+tab",
+        "command": "cursorWordEndLeftSelect"
+    },
+    // 選択 (ファイル単位)
+    {
         "key": "ctrl+shift+a",
         "command": "selectAll"
     },
+    // 検索
     {
         "key": "ctrl+shift+s",
         "command": "actions.find"
@@ -71,30 +131,20 @@
         "key": "ctrl+shift+5",
         "command": "editor.action.startFindReplaceAction"
     },
+    // redo, undo
     {
-        "key": "alt+f",
-        "command": "cursorRightSelect"
+        "key": "ctrl+y",
+        "command": "redo"
     },
     {
-        "key": "alt+b",
-        "command": "cursorLeftSelect"
+        "key": "ctrl+z",
+        "command": "undo"
     },
     {
-        "key": "alt+n",
-        "command": "cursorDownSelect"
+        "key": "ctrl+shift+z",
+        "command": "undo"
     },
-    {
-        "key": "alt+p",
-        "command": "cursorUpSelect"
-    },
-    {
-        "key": "alt+a",
-        "command": "cursorHomeSelect"
-    },
-    {
-        "key": "alt+e",
-        "command": "cursorEndSelect"
-    },
+    // tabの挙動 (プラグインによる制御)
     {
         "key": "tab",
         "command": "emacs-tab.reindentCurrentLine",
