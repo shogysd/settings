@@ -119,10 +119,10 @@
         "command": "selectAll"
     },
     {
-        "key": "alt+shift+a",
+        "key": "cmd+a",
         "command": "selectAll"
     },
-    // 検索, 置換
+    // 検索
     {
         "key": "ctrl+shift+s",
         "command": "actions.find"
@@ -135,9 +135,42 @@
         "key": "ctrl+shift+5",
         "command": "editor.action.startFindReplaceAction"
     },
+    // copy, paste, cut
+    {
+        "key": "ctrl+c",
+        "command": "editor.action.clipboardCopyAction"
+    },
+    {
+        "key": "cmd+c",
+        "command": "editor.action.clipboardCopyAction"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "editor.action.clipboardPasteAction"
+    },
+    {
+        "key": "cmd+v",
+        "command": "editor.action.clipboardPasteAction"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "editor.action.clipboardCutAction"
+    },
+    {
+        "key": "cmd+x",
+        "command": "editor.action.clipboardCutAction"
+    },
     // redo, undo
     {
         "key": "ctrl+y",
+        "command": "redo"
+    },
+    {
+        "key": "ctrl+shift+z",
+        "command": "redo"
+    },
+    {
+        "key": "cmd+shift+z",
         "command": "redo"
     },
     {
@@ -145,7 +178,7 @@
         "command": "undo"
     },
     {
-        "key": "ctrl+shift+z",
+        "key": "cmd+z",
         "command": "undo"
     },
     // tabの挙動 (プラグインによる制御)
