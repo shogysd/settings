@@ -1,4 +1,8 @@
 <keymap version="1" name="Customized_keymap" parent="Default for GNOME">
+  <action id="$Delete">
+    <keyboard-shortcut first-keystroke="delete" />
+    <keyboard-shortcut first-keystroke="ctrl d" />
+  </action>
   <action id="$Redo">
     <keyboard-shortcut first-keystroke="shift alt back_space" />
     <keyboard-shortcut first-keystroke="ctrl y" />
@@ -10,23 +14,36 @@
     <keyboard-shortcut first-keystroke="shift ctrl z" />
   </action>
   <action id="BraceOrQuoteOut" />
+  <action id="ChangesView.Diff" />
   <action id="ChangesView.ShelveSilently" />
   <action id="CheckinProject" />
   <action id="CollapseBlock" />
+  <action id="CompareTwoFiles" />
+  <action id="Console.TableResult.CloneRow" />
   <action id="Console.TableResult.FindInGrid">
     <keyboard-shortcut first-keystroke="shift alt 3" />
   </action>
+  <action id="DatabaseView.CopyAction" />
   <action id="Diagram.SelectAll">
     <keyboard-shortcut first-keystroke="shift ctrl a" />
     <keyboard-shortcut first-keystroke="shift alt a" />
   </action>
   <action id="Diff.FocusOppositePane" />
   <action id="Diff.FocusOppositePaneAndScroll" />
+  <action id="Diff.ShowDiff" />
+  <action id="Editor Delete">
+    <keyboard-shortcut first-keystroke="ctrl d" />
+  </action>
   <action id="Editor Redo">
     <keyboard-shortcut first-keystroke="ctrl y" />
   </action>
   <action id="Editor Undo">
     <keyboard-shortcut first-keystroke="shift ctrl z" />
+  </action>
+  <action id="EditorBackSpace">
+    <keyboard-shortcut first-keystroke="back_space" />
+    <keyboard-shortcut first-keystroke="shift back_space" />
+    <keyboard-shortcut first-keystroke="ctrl h" />
   </action>
   <action id="EditorChooseLookupItemReplace" />
   <action id="EditorDeleteLine" />
@@ -52,6 +69,7 @@
     <keyboard-shortcut first-keystroke="shift down" />
     <keyboard-shortcut first-keystroke="alt n" />
   </action>
+  <action id="EditorDuplicate" />
   <action id="EditorIndentSelection" />
   <action id="EditorLeft">
     <keyboard-shortcut first-keystroke="left" />
@@ -134,6 +152,7 @@
     <keyboard-shortcut first-keystroke="tab" />
   </action>
   <action id="ExpandLiveTemplateByTab" />
+  <action id="FileChooser.GotoDesktop" />
   <action id="FileChooser.NewFolder" />
   <action id="FileChooser.TogglePathShowing" />
   <action id="Find">
@@ -165,11 +184,15 @@
     <keyboard-shortcut first-keystroke="shift ctrl h" />
     <keyboard-shortcut first-keystroke="shift ctrl 5" />
   </action>
+  <action id="RunDashboard.CopyConfiguration" />
   <action id="SearchEverywhere.CompleteCommand" />
   <action id="SearchEverywhere.NextTab" />
+  <action id="SendEOF" />
   <action id="Switcher" />
   <action id="SwitcherRecentEditedChangedToggleCheckBox" />
   <action id="ToggleBookmark5" />
+  <action id="TypeHierarchy" />
+  <action id="TypeHierarchyBase.BaseOnThisType" />
   <action id="Vcs.Log.GoToRef">
     <keyboard-shortcut first-keystroke="shift alt 3" />
   </action>
@@ -179,4 +202,6 @@
     <keyboard-shortcut first-keystroke="ctrl m" />
   </action>
   <action id="VcsHistory.ShowAllAffected" />
+  <action id="XDebugger.CopyWatch" />
+  <action id="openAssertEqualsDiff" />
 </keymap>
