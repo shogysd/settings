@@ -26,6 +26,12 @@ if [ $start = "y" ]; then
         rm ~/.gitconfig > /dev/null 2>&1
     fi
     
+    if [ ${os} = "Darwin" ]; then
+        git config --global core.editor '/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+    else
+        git config --global core.editor 'emacs -nw'
+    fi
+    
     git config --global core.excludesfile ~/.gitignore_global
     git config --global core.editor 'emacs -nw'
     git config --global core.pager less
