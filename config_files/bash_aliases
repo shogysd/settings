@@ -25,6 +25,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias hn='hostname'
 alias flush='rm -f *~ .*~ \#*\#'
+alias cp='cp -i'
 
 # git
 alias gd='cd $(git rev-parse --show-toplevel)'
