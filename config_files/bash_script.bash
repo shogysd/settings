@@ -32,6 +32,28 @@ function strcmp(){
 }
 
 
+ULO_STRING=""
+function ulo(){
+    if [ "${ULO_STRING}" = "" ]; then
+        find /usr/local/opt/*/bin -name bin ! -regex "/usr/local/opt/.*@.*/bin" -type d > /dev/null 2>&1
+
+        if [ $? != 0 ]; then
+            echo "ulo: '/usr/local/opt/*/bin' No such directory"
+        else
+            for p in `find /usr/local/opt/*/bin -name bin ! -regex "/usr/local/opt/.*@.*/bin" -type d`; do
+                ULO_STRING="${p}:${ULO_STRING}"
+            done
+            export PATH="${ULO_STRING}"$PATH
+            echo 'added: /usr/local/opt/*/bin'
+        fi
+    else
+        export PATH=`echo $PATH | sed -e "s%${ULO_STRING}%%g"`
+        ULO_STRING=""
+        echo 'deleted: /usr/local/opt/*/bin'
+    fi
+}
+
+
 function addpath(){
     if [ $# = 0 ]; then
         echo "error: nothing arguments"
