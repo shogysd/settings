@@ -29,14 +29,13 @@ shopt -u histappend
 PS1="\n\$(-l1Printer)\
 \n\$(-envWriter)\$ "
 
-if [ "$TERM" != 'dumb' ] && [ "${SSH_CONNECTION}" != "" ]; then
-    screen -ls | grep Attached | tr '.' ' ' | echo -e "${esc_key}[1;32m`awk '{printf "%s %s\t(Attached)\n", $1, $2}'`${esc_key}[0;39m"
-    screen -ls | grep Detached | tr '.' ' ' | awk '{printf "%s %s\t(Detached)\n", $1, $2}'
-    echo ""
-    # pwd | tr -d '\n'
-    pwd
-fi
 if [ "$TERM" != 'dumb' ]; then
+    if [ "${SSH_CONNECTION}" != "" ]; then
+        screen -ls | grep Attached | tr '.' ' ' | echo -e "${esc_key}[1;32m`awk '{printf "%s %s\t(Attached)\n", $1, $2}'`${esc_key}[0;39m"
+        screen -ls | grep Detached | tr '.' ' ' | awk '{printf "%s %s\t(Detached)\n", $1, $2}'
+    fi
+    echo ""
+    pwd
     if [ `ls | wc -m | sed 's/^[ \t]*//'` = 0 ]; then
         echo -e "Current directory is clean."
     else
