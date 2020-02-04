@@ -35,7 +35,6 @@ if [ "$TERM" != 'dumb' ]; then
         screen -ls | grep Detached | tr '.' ' ' | awk '{printf "%s %s\t(Detached)\n", $1, $2}'
     fi
     echo ""
-    pwd
     if [ `ls | wc -m | sed 's/^[ \t]*//'` = 0 ]; then
         echo -e "Current directory is clean."
     else
