@@ -18,6 +18,11 @@ if [ $SHLVL = 1 ] && [ -f ~/.screenrc ]; then
     -screenStarter
 fi
 
+
+if [ `uname 2>&1` = "Darwin" ]; then
+    export BASH_SILENCE_DEPRECATION_WARNING=1
+fi
+
 # bashの追記は不要 (PROMPT_COMMAND='share_history' による)
 shopt -u histappend
 
