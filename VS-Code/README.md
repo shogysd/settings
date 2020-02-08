@@ -29,7 +29,7 @@ code --install-extension christian-kohler.path-intellisense;\
 code --install-extension shardulm94.trailing-spaces;\
 code --install-extension formulahendry.auto-close-tag;\
 code --install-extension formulahendry.auto-rename-tag;\
-code --install-extension MS-CEINTL.vscode-language-pack-ja;\
+code --install-extension ms-ceintl.vscode-language-pack-ja;\
 # code --install-extension oderwat.indent-rainbow;\
 echo "finish"
 ```
