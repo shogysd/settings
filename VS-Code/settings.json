@@ -17,7 +17,6 @@
     "editor.wordWrapColumn": 80,
     "editor.renderControlCharacters": true,
     "editor.renderIndentGuides": true,
-    "editor.matchBrackets": true,
     "editor.folding": true,
     // terminal
     "terminal.integrated.cursorBlinking": false,
@@ -28,7 +27,7 @@
     "terminal.external.osxExec": "Terminal.app",
     // workbench
     "workbench.editor.enablePreview": false,
-    "workbench.startupEditor": false,
+    "workbench.startupEditor": "none",
     "workbench.colorCustomizations": {
         // ステータスバー背景色
         "statusBar.background": "#000000",
