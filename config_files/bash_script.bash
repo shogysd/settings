@@ -268,7 +268,6 @@ function config-update(){
         do
             echo "${update_files[i]}"
             ${download_command} ~/.${update_files[i]} ${url_common}config_files/${update_files[i]}
-            echo ""
         done
 
         echo "git-completion.bash"
