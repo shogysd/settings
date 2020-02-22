@@ -9,7 +9,7 @@ fi
 os=`uname 2>&1`
 if [ ${os} = "Darwin" ]; then
     # macOS
-    download_command='curl -# -o'
+    download_command='curl -s -o'
 else
     # Linux ${os} = "Linux"
     download_command='wget -O'
