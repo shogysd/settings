@@ -37,6 +37,12 @@ export PATH=$PATH":$HOME/google-cloud-sdk/bin"
 # GOPATH
 export GOPATH=$HOME/gopath_global
 
+# set
+set -o | grep history | grep -q on
+if [ $? != 0 ]; then
+    set -o history
+fi
+
 # Python
 os=`uname 2>&1`
 if [ ${os} = "Darwin" ]; then
