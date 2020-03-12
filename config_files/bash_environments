@@ -7,7 +7,7 @@ export BASICINFO="$(whoami)@$(hostname | sed -e 's/\.local//g')"
 export HISTCONTROL=ignoreboth
 
 # 履歴に保存しないコマンド
-export HISTIGNORE='pwd':'clear':'ls':'ls -l':'ls -a'
+export HISTIGNORE='shis':'pwd':'clear':'ls':'ls -l':'ls -a'
 
 # プロンプトの表示前に実行するコマンド
 PROMPT_COMMAND='history -a'
