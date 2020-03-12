@@ -16,7 +16,7 @@ PROMPT_COMMAND='history -a'
 export HISTSIZE=9999
 
 # 履歴のフォーマットを設定 (c言語のstrftimeと同じものが使える)
-export HISTTIMEFORMAT='%m/%d/%y (%H:%M:%S)   '
+export HISTTIMEFORMAT='%m-%d-%Y (%H:%M:%S)   '
 
 # Ctrl-dを1回無視する（2回で反応）
 IGNOREEOF=1
