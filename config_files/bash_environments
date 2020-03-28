@@ -42,3 +42,10 @@ set -o | grep history | grep -q on
 if [ $? != 0 ]; then
     set -o history
 fi
+
+if [ `uname 2>&1` = "Darwin" ]; then
+    # macOS
+    export PATH=$PATH":/Library/Frameworks/$(ls /Library/Frameworks/Python.framework/Versions/ | sort -nr | head -n 1)/bin"
+# else
+    # Linux
+fi
