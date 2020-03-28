@@ -45,7 +45,7 @@ fi
 
 if [ `uname 2>&1` = "Darwin" ]; then
     # macOS
-    export PATH=$PATH":(find /Library/Frameworks/Python.framework/Versions/* -maxdepth 1 -name bin | sort -r | head -n 1)}"
+    export PATH=$PATH":$(find /Library/Frameworks/Python.framework/Versions/* -maxdepth 1 -name bin | sort -r | head -n 1)}"
 # else
     # Linux
 fi
