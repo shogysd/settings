@@ -15,6 +15,17 @@ else
 fi
 
 
+function env(){                                                                                            
+    if [ "" = "${VIRTUAL_ENV}" ] && [ $# = 1 ] && [ -f ${1}/bin/activate ]; then                           
+        source ${1}/bin/activate                                                                           
+    elif [ "" != "${VIRTUAL_ENV}" ] && [ $# = 0 ]; then                                                    
+        deactivate                                                                                         
+    else                                                                                                   
+        echo "error: please check argument and virtualenv root path."                                      
+    fi                                                                                                     
+}      
+
+
 function strcmp(){
     if [ $# = 0 ]; then
         echo "error: nothing arguments"
