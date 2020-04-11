@@ -34,8 +34,10 @@ Conversion	Shift Left	SegmentWidthShrink
 Conversion	Ctrl Shift b	SegmentWidthShrink
 Conversion	Up	ConvertPrev
 Conversion	Ctrl p	ConvertPrev
+Conversion	Shift Space	ConvertPrev
 Conversion	Down	ConvertNext
 Conversion	Ctrl n	ConvertNext
+Conversion	Space	ConvertNext
 DirectInput	Ctrl Space	IMEOn
 Precomposition	Ctrl Space	IMEOff
 Composition	ASCII	InsertCharacter
