@@ -1,18 +1,8 @@
-# Time-stamp: <Sun Mar 25 14:08:57 JST 2018>
 #!/bin/bash
 
 if [ ${EUID:-${UID}} = 0 ]; then
     echo "ERROR"
     exit 1
-fi
-
-os=`uname 2>&1`
-if [ ${os} = "Darwin" ]; then
-    # macOS
-    download_command='curl -s -o'
-else
-    # Linux ${os} = "Linux"
-    download_command='wget -O'
 fi
 
 echo ""
