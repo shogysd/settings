@@ -60,8 +60,7 @@ ThinkPadの場合 / HHKB Mac-Mode (tweakのUIから設定)
 
 ### 日本語入力を有効にしたり、変換候補の表示場所をいい感じにする
 ```
-$ sudo apt-get install ibus-mozc
-$ sudo apt-get install ibus-gtk ibus-gtk3 ibus-qt4
+$ sudo apt-get install ibus-mozc ibus-gtk ibus-gtk3 ibus-avro mozc-utils-gui
 ```
 
 ##### GNOME3
